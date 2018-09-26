@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Thuria.Zitidar.Extensions</name>
+    </assembly>
+    <members>
+        <member name="T:Thuria.Zitidar.Extensions.DateExtensions">
+            <summary>
+            Date and DateTime Extensions
+            </summary>
+        </member>
+        <member name="M:Thuria.Zitidar.Extensions.DateExtensions.StartOfDay(System.DateTime)">
+            <summary>
+            Return Start of Day for a specified Date
+            </summary>
+            <param name="inputDate">Input Date</param>
+            <returns>DateTime with the Start of Day set</returns>
+        </member>
+        <member name="M:Thuria.Zitidar.Extensions.DateExtensions.EndOfDay(System.DateTime)">
+            <summary>
+            Return End of Day for a specified Date
+            </summary>
+            <param name="inputDate">Input Date</param>
+            <returns>DateTime with the End of Day set</returns>
+        </member>
+        <member name="T:Thuria.Zitidar.Extensions.EnumerableExtensions">
+            <summary>
+            Enumerable Extensions
+            </summary>
+        </member>
+        <member name="M:Thuria.Zitidar.Extensions.EnumerableExtensions.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0})">
+            <summary>
+            Foreach item in a collection perform a specified action
+            </summary>
+            <typeparam name="T">Collection Object Type</typeparam>
+            <param name="inputCollection">Input Collection</param>
+            <param name="actionToExecute">Action to be executed for each item in the collection</param>
+        </member>
+        <member name="M:Thuria.Zitidar.Extensions.EnumerableExtensions.IsEmpty``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Determine if a collection is Empty
+            </summary>
+            <typeparam name="T">Collection Type</typeparam>
+            <param name="inputCollection">Input Collection</param>
+            <returns>Boolean indicating if the collection is empty (true) or not (false)</returns>
+        </member>
+        <member name="M:Thuria.Zitidar.Extensions.EnumerableExtensions.GetAllAsString``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Retrieve all the items in a collection as a newline delimited string
+            </summary>
+            <typeparam name="T">Collection Type</typeparam>
+            <param name="inputCollection">Input Collection</param>
+            <returns>A newline delimited string representing all the items in a collection</returns>
+        </member>
+        <member name="M:Thuria.Zitidar.Extensions.EnumerableExtensions.And``1(System.Collections.Generic.IEnumerable{``0},``0[])">
+            <summary>
+            Concatenate the provided items to an existing collection
+            </summary>
+            <typeparam name="T">Collection Type</typeparam>
+            <param name="inputCollection">Input Collection</param>
+            <param name="itemsToAdd">Item(s) to add to the collection</param>
+            <returns>The newly create collection of items</returns>
+        </member>
+        <member name="T:Thuria.Zitidar.Extensions.StringExtensions">
+            <summary>
+            String Extensions
+            </summary>
+        </member>
+        <member name="M:Thuria.Zitidar.Extensions.StringExtensions.RemoveSpaceAndCharacters(System.String)">
+            <summary>
+            Remove Spaces and Characters from a string
+            </summary>
+            <param name="inputString">Input String</param>
+            <returns>String with the spaces and characters removed</returns>
+        </member>
+        <member name="M:Thuria.Zitidar.Extensions.StringExtensions.CamelCase(System.String)">
+            <summary>
+            Convert a string to Camel Case
+            </summary>
+            <param name="inputString">Input String</param>
+            <returns>String converted to Camel Case</returns>
+        </member>
+        <member name="M:Thuria.Zitidar.Extensions.StringExtensions.PascalCase(System.String)">
+            <summary>
+            Convert a string to Pascal Casing
+            </summary>
+            <param name="inputString">Input String</param>
+            <returns>String converted to Pascal Casing</returns>
+        </member>
+        <member name="M:Thuria.Zitidar.Extensions.StringExtensions.EscapeQuotes(System.String)">
+            <summary>
+            Escape the Quotes in a string
+            </summary>
+            <param name="inputString">Input String</param>
+            <returns>String with the Quotes escaped</returns>
+        </member>
+        <member name="T:Thuria.Zitidar.Extensions.TypeExtensions">
+            <summary>
+            Various Type and Object Extensions
+            </summary>
+        </member>
+        <member name="M:Thuria.Zitidar.Extensions.TypeExtensions.GetPropertyValue(System.Object,System.String)">
+            <summary>
+            Get Property Value
+            </summary>
+            <param name="currentObject">Current Object to get the value from</param>
+            <param name="propertyName">Property Name</param>
+            <returns></returns>
+        </member>
+        <member name="M:Thuria.Zitidar.Extensions.TypeExtensions.SetPropertyValue(System.Object,System.String,System.Object,System.Boolean)">
+            <summary>
+            Set Property Value
+            </summary>
+            <param name="currentObject">Object to set the property value on</param>
+            <param name="propertyName">Property Name</param>
+            <param name="propertyValue">Property Value</param>
+            <param name="convertIfRequired">Indicator to determine if the value must be converted to the Property Data Type</param>
+        </member>
+        <member name="M:Thuria.Zitidar.Extensions.TypeExtensions.DoesPropertyExist(System.Object,System.String)">
+            <summary>
+            Determin if a Property exist on an object
+            </summary>
+            <param name="currentObject">Object</param>
+            <param name="propertyName">Property name</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
