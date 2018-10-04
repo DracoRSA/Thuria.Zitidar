@@ -26,6 +26,7 @@ namespace Thuria.Zitidar.Extensions.Tests
     public void IsEmpty_GivenEmptyList_ShouldReturnTrue()
     {
       //---------------Set up test pack-------------------
+      // ReSharper disable once CollectionNeverUpdated.Local
       var testList = new List<object>();
       //---------------Assert Precondition----------------
       //---------------Execute Test ----------------------
@@ -71,26 +72,30 @@ namespace Thuria.Zitidar.Extensions.Tests
       //---------------Execute Test ----------------------
       var result = testList.And("Test 3", "Test 4");
       //---------------Test Result -----------------------
-      Assert.AreEqual(4, result.Count());
-      Assert.IsTrue(result.Contains("Test 1"));
-      Assert.IsTrue(result.Contains("Test 2"));
-      Assert.IsTrue(result.Contains("Test 3"));
-      Assert.IsTrue(result.Contains("Test 4"));
+      var resultList = result as string[] ?? result.ToArray();
+      Assert.AreEqual(4, resultList.Count());
+      Assert.IsTrue(resultList.Contains("Test 1"));
+      Assert.IsTrue(resultList.Contains("Test 2"));
+      Assert.IsTrue(resultList.Contains("Test 3"));
+      Assert.IsTrue(resultList.Contains("Test 4"));
     }
 
     private class FakeObject
     {
-      public bool WasCalled { get; set; } = false;
+      // ReSharper disable once NotAccessedField.Local
+      private string _toStringMessage = typeof(FakeObject).ToString();
 
-      private string toStringMessage = typeof(FakeObject).ToString();
-
+      // ReSharper disable once UnusedMember.Local
       public FakeObject()
       {
       }
 
+      // ReSharper disable once UnusedMember.Local
+      public bool WasCalled { get; set; } = false;
+
       public FakeObject(string toStringMessage)
       {
-        this.toStringMessage = toStringMessage;
+        _toStringMessage = toStringMessage;
       }
     }
   }

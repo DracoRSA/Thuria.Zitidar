@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Thuria.Zitidar.Core</name>
+    </assembly>
+    <members>
+        <member name="T:Thuria.Zitidar.Core.LogSeverity">
+            <summary>
+            Logger Severity Enumerations
+            </summary>
+        </member>
+        <member name="F:Thuria.Zitidar.Core.LogSeverity.Debug">
+            <summary>
+            Log all messages
+            </summary>
+        </member>
+        <member name="F:Thuria.Zitidar.Core.LogSeverity.Info">
+            <summary>
+            Log Info, Warning, Error and Exception messages
+            </summary>
+        </member>
+        <member name="F:Thuria.Zitidar.Core.LogSeverity.Warning">
+            <summary>
+            Log Warning, Error and Exception messages
+            </summary>
+        </member>
+        <member name="F:Thuria.Zitidar.Core.LogSeverity.Error">
+            <summary>
+            Log Error and Exception messages
+            </summary>
+        </member>
+        <member name="F:Thuria.Zitidar.Core.LogSeverity.Exception">
+            <summary>
+            Log Exception messages
+            </summary>
+        </member>
+        <member name="T:Thuria.Zitidar.Core.IThuriaBootstrapper">
+            <summary>
+            Thuria Bootstrapper
+            </summary>
+        </member>
+        <member name="P:Thuria.Zitidar.Core.IThuriaBootstrapper.IocContainer">
+            <summary>
+            Thuria IOC Container
+            </summary>
+        </member>
+        <member name="M:Thuria.Zitidar.Core.IThuriaBootstrapper.Build">
+            <summary>
+            Build the bootstrapper
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Thuria.Zitidar.Core.IThuriaIocContainer">
+            <summary>
+            Thuria IOC Container
+            </summary>
+        </member>
+        <member name="M:Thuria.Zitidar.Core.IThuriaIocContainer.GetInstance``1">
+            <summary>
+            Get an instance of type T from the container
+            </summary>
+            <typeparam name="T">Type</typeparam>
+            <returns>Object of type T as requested</returns>
+        </member>
+        <member name="M:Thuria.Zitidar.Core.IThuriaIocContainer.GetInstance``1(System.String)">
+            <summary>
+            Get a named instance of type T from the container
+            </summary>
+            <param name="instanceName">Name of the instance</param>
+            <returns>Named instance of Object of type T as requested</returns>
+        </member>
+        <member name="M:Thuria.Zitidar.Core.IThuriaIocContainer.GetInstance(System.Type)">
+            <summary>
+            Get an instance of Type from the container
+            </summary>
+            <param name="requiredType">Instance Type</param>
+            <returns>An object of the specified Type</returns>
+        </member>
+        <member name="M:Thuria.Zitidar.Core.IThuriaIocContainer.GetInstance(System.Type,System.String)">
+            <summary>
+            Get a named instance of Type from the container
+            </summary>
+            <param name="requiredType">Instance Type</param>
+            <param name="instanceName">Name of the instance</param>
+            <returns>An object of the specified Type registered with the specified name</returns>
+        </member>
+        <member name="M:Thuria.Zitidar.Core.IThuriaIocContainer.GetAllInstances``1">
+            <summary>
+            Get a list of items of Type T from the container
+            </summary>
+            <typeparam name="T">Instance Type</typeparam>
+            <returns>A list of instances implementing Type T</returns>
+        </member>
+        <member name="M:Thuria.Zitidar.Core.IThuriaIocContainer.GetAllInstances(System.Type)">
+            <summary>
+            Get a list of items of Type from the container
+            </summary>
+            <param name="instanceType">Instance Type</param>
+            <returns>A list of instances implementing Type</returns>
+        </member>
+        <member name="T:Thuria.Zitidar.Core.IThuriaLogger">
+            <summary>
+            Thuria Logger
+            </summary>
+        </member>
+        <member name="M:Thuria.Zitidar.Core.IThuriaLogger.LogMessage(Thuria.Zitidar.Core.LogSeverity,System.String,System.Exception)">
+            <summary>
+            Log a message
+            </summary>
+            <param name="logSeverity">Log Severity</param>
+            <param name="newMessage">Log message</param>
+            <param name="exceptionMessage">Exception (optional)</param>
+        </member>
+        <member name="T:Thuria.Zitidar.Core.IThuriaNamedInstance">
+            <summary>
+            Thuria Named Instance
+            </summary>
+        </member>
+        <member name="P:Thuria.Zitidar.Core.IThuriaNamedInstance.Name">
+            <summary>
+            Name of the Instance
+            </summary>
+        </member>
+        <member name="T:Thuria.Zitidar.Core.IThuriaService">
+            <summary>
+            Thuria Service
+            </summary>
+        </member>
+        <member name="T:Thuria.Zitidar.Core.IThuriaStartable">
+            <summary>
+            Thuria Startable object
+            </summary>
+        </member>
+        <member name="M:Thuria.Zitidar.Core.IThuriaStartable.Start">
+            <summary>
+            Start
+            </summary>
+        </member>
+        <member name="T:Thuria.Zitidar.Core.IThuriaStoppable">
+            <summary>
+            Thuria Stoppable object
+            </summary>
+        </member>
+        <member name="M:Thuria.Zitidar.Core.IThuriaStoppable.Stop">
+            <summary>
+            Stop
+            </summary>
+        </member>
+    </members>
+</doc>
