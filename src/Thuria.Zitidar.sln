@@ -9,9 +9,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Thuria.Zitidar.Extensions.T
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Thuria.Zitidar.Structuremap.Tests", "Thuria.Zitidar.Structuremap.Tests\Thuria.Zitidar.Structuremap.Tests.csproj", "{C9E22876-7912-4286-9976-8104466A191C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Thuria.Zitidar.Structuremap", "Thuria.Zitidar.Structuremap\Thuria.Zitidar.Structuremap.csproj", "{E42E2A4F-1FED-4079-AB65-B651D9A60515}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Thuria.Zitidar.Structuremap", "Thuria.Zitidar.Structuremap\Thuria.Zitidar.Structuremap.csproj", "{E42E2A4F-1FED-4079-AB65-B651D9A60515}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Thuria.Zitidar.Core", "Thuria.Zitidar.Core\Thuria.Zitidar.Core.csproj", "{F09E3F51-6DEC-482E-92BC-AC142AC1347E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Thuria.Zitidar.Core", "Thuria.Zitidar.Core\Thuria.Zitidar.Core.csproj", "{F09E3F51-6DEC-482E-92BC-AC142AC1347E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4EC3D2B5-4C5C-4B92-BFA3-E6D2E4401551}"
+	ProjectSection(SolutionItems) = preProject
+		..\readme.md = ..\readme.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

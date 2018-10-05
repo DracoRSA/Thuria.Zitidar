@@ -2,6 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Johan Dercksen</Authors>
+    <Company>Draco</Company>
+    <Product>Thuria</Product>
+    <PackageLicenseUrl></PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/DracoRSA/Thuria.Zitidar</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/DracoRSA/Thuria.Zitidar</RepositoryUrl>
+    <PackageTags>Thuria Structuremap</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>

@@ -2,6 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageTags>Thuria Extensions</PackageTags>
+    <Authors>Johan Dercksen</Authors>
+    <Company>Draco</Company>
+    <Product>Thuria</Product>
+    <PackageProjectUrl>https://github.com/DracoRSA/Thuria.Zitidar</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/DracoRSA/Thuria.Zitidar</RepositoryUrl>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
