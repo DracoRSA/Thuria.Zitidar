@@ -4,7 +4,7 @@ Thuria - Zitidar
 Overview
 ---
 
-The Thuria itidar set of packages give core based functionality to any Dotnet Core project.
+The Thuria Zitidar set of packages give core based functionality to any Dotnet Core project.
 
 Features
 ---
