@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Thuria.Zitidar.Akka</name>
+    </assembly>
+    <members>
+        <member name="T:Thuria.Zitidar.Akka.IThuriaActorMessage">
+            <summary>
+            Thuria Actor Message
+            </summary>
+        </member>
+        <member name="P:Thuria.Zitidar.Akka.IThuriaActorMessage.Id">
+            <summary>
+            Message ID
+            </summary>
+        </member>
+        <member name="T:Thuria.Zitidar.Akka.IThuriaActorService">
+            <summary>
+            Thuria Actor Service
+            </summary>
+        </member>
+        <member name="P:Thuria.Zitidar.Akka.IThuriaActorService.ActorSystem">
+            <summary>
+            Actor System
+            </summary>
+        </member>
+        <member name="T:Thuria.Zitidar.Akka.IThuriaActorSystem">
+            <summary>
+            Thuria Actor System
+            </summary>
+        </member>
+        <member name="P:Thuria.Zitidar.Akka.IThuriaActorSystem.ActorSystem">
+            <summary>
+            Actor System
+            </summary>
+        </member>
+        <member name="T:Thuria.Zitidar.Akka.Models.ThuriaCoordinatorDataModel">
+            <summary>
+            Thuria Coordinator Data Model
+            </summary>
+        </member>
+        <member name="M:Thuria.Zitidar.Akka.Models.ThuriaCoordinatorDataModel.#ctor(Thuria.Zitidar.Akka.IThuriaActorMessage,Akka.Actor.IActorRef,Akka.Actor.IActorRef)">
+            <summary>
+            Thuria Coordinator Data Model constructor
+            </summary>
+            <param name="actorMessage">Actor Message</param>
+            <param name="originalActor">Original Sending Actor</param>
+            <param name="processingActor">Message Processing Actor</param>
+        </member>
+        <member name="P:Thuria.Zitidar.Akka.Models.ThuriaCoordinatorDataModel.ActorMessage">
+            <summary>
+            Actor Message
+            </summary>
+        </member>
+        <member name="P:Thuria.Zitidar.Akka.Models.ThuriaCoordinatorDataModel.OriginalActor">
+            <summary>
+            Original Sending Actor
+            </summary>
+        </member>
+        <member name="P:Thuria.Zitidar.Akka.Models.ThuriaCoordinatorDataModel.ProcessingActor">
+            <summary>
+            Message Processing Actor
+            </summary>
+        </member>
+        <member name="T:Thuria.Zitidar.Akka.Service.ThuriaActorServiceBase">
+            <summary>
+            Thuria Actor Service Base implementation
+            </summary>
+        </member>
+        <member name="M:Thuria.Zitidar.Akka.Service.ThuriaActorServiceBase.#ctor(Thuria.Zitidar.Akka.IThuriaActorSystem)">
+            <summary>
+            Thuria Actor Service Base Constructor
+            </summary>
+            <param name="actorSystem">Actor System</param>
+        </member>
+        <member name="P:Thuria.Zitidar.Akka.Service.ThuriaActorServiceBase.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Thuria.Zitidar.Akka.Service.ThuriaActorServiceBase.ActorSystem">
+            <inheritdoc />
+        </member>
+        <member name="M:Thuria.Zitidar.Akka.Service.ThuriaActorServiceBase.Dispose">
+            <inheritdoc />
+        </member>
+        <member name="M:Thuria.Zitidar.Akka.Service.ThuriaActorServiceBase.Start">
+            <inheritdoc />
+        </member>
+        <member name="M:Thuria.Zitidar.Akka.Service.ThuriaActorServiceBase.Stop">
+            <inheritdoc />
+        </member>
+        <member name="T:Thuria.Zitidar.Akka.Settings.ThuriaHoconLoader">
+            <summary>
+            Thuria Hocon Loader
+            </summary>
+        </member>
+        <member name="M:Thuria.Zitidar.Akka.Settings.ThuriaHoconLoader.FromFile(System.String)">
+            <summary>
+            Load the Hocon Configuration from the specified file
+            </summary>
+            <param name="hoconFile">Hocon File</param>
+            <returns>Loaded Hocon Configuration</returns>
+        </member>
+    </members>
+</doc>

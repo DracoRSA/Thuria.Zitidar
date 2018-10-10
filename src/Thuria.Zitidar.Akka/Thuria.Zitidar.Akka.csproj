@@ -5,14 +5,22 @@
     <Authors>Johan Dercksen</Authors>
     <Company>Draco</Company>
     <Product>Thuria</Product>
+    <PackageLicenseUrl>https://github.com/DracoRSA/Thuria.Zitidar/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/DracoRSA/Thuria.Zitidar</PackageProjectUrl>
     <RepositoryUrl>https://github.com/DracoRSA/Thuria.Zitidar</RepositoryUrl>
-    <PackageTags>Thuria</PackageTags>
-    <PackageLicenseUrl>https://github.com/DracoRSA/Thuria.Zitidar/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageTags>Thuria Core Akka</PackageTags>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>D:\Draco\Thuria.Zitidar\src\Thuria.Zitidar.Core\Thuria.Zitidar.Core.xml</DocumentationFile>
+    <DocumentationFile>D:\Draco\Thuria.Zitidar\src\Thuria.Zitidar.Akka\Thuria.Zitidar.Akka.xml</DocumentationFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Akka" Version="1.3.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Thuria.Zitidar.Core\Thuria.Zitidar.Core.csproj" />
+  </ItemGroup>
 
 </Project>

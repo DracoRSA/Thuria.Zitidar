@@ -12,6 +12,7 @@ Features
 * **Core** - A set of interfaces to allow for development against just an API using dependency injection
 * **Extensions** - Various extensions to just add functionality to types like DateTime, String, Type, etc
 * **Structuremap** - A set of additional functionality to add structuremap functionality to any application (Bootstrapper, IOC Container wrapper, etc)
+* **Akka** - A set of functions and features to assist with creating an Actor System using [Akka.Net](http://getakka.net)
 
 Core
 ---
@@ -68,4 +69,9 @@ Example:
 * StructuremapThuriaIocContainer
 
 ---
+Akka
+---
 
+To be completed
+
+---
