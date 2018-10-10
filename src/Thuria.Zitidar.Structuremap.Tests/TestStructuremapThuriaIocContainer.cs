@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Moq;
 using NUnit.Framework;
 using FluentAssertions;
+using NSubstitute;
 using Thuria.Calot.TestUtilities;
 
 using StructureMap;
@@ -35,14 +36,17 @@ namespace Thuria.Zitidar.Structuremap.Tests
       //---------------Test Result -----------------------
     }
     
-    [TestCase("iocContainer", "Container")]
-    public void Constructor_GivenContainer_ShouldSetContainerProperty(string parameterName, string propertyName)
+    [Test]
+    public void Constructor_GivenContainer_ShouldSetContainerProperty()
     {
       //---------------Set up test pack-------------------
+      var container    = Substitute.For<IContainer>();
+      var iocContainer = new StructuremapThuriaIocContainer(container);
       //---------------Assert Precondition----------------
       //---------------Execute Test ----------------------
-      ConstructorTestHelper.ValidatePropertySetWithParameter<StructuremapThuriaIocContainer>(parameterName, propertyName);
+      var iocContainerContainer = iocContainer.Container;
       //---------------Test Result -----------------------
+      container.Should().Be(iocContainerContainer);
     }
     
     [Test]

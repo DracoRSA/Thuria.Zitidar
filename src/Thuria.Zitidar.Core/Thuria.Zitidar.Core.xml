@@ -55,6 +55,11 @@
             Thuria IOC Container
             </summary>
         </member>
+        <member name="P:Thuria.Zitidar.Core.IThuriaIocContainer.Container">
+            <summary>
+            Underlying Raw Container
+            </summary>
+        </member>
         <member name="M:Thuria.Zitidar.Core.IThuriaIocContainer.GetInstance``1">
             <summary>
             Get an instance of type T from the container

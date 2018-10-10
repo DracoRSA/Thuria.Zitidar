@@ -88,6 +88,37 @@
         <member name="M:Thuria.Zitidar.Akka.Service.ThuriaActorServiceBase.Stop">
             <inheritdoc />
         </member>
+        <member name="T:Thuria.Zitidar.Akka.Service.ThuriaActorSystemBase">
+            <inheritdoc />
+        </member>
+        <member name="M:Thuria.Zitidar.Akka.Service.ThuriaActorSystemBase.#ctor(Thuria.Zitidar.Core.IThuriaIocContainer)">
+            <summary>
+            Thuria Actor System Base Constructor
+            </summary>
+            <param name="iocContainer">IOC Container</param>
+        </member>
+        <member name="M:Thuria.Zitidar.Akka.Service.ThuriaActorSystemBase.Dispose">
+            <summary>
+            Dispose allocated resources
+            </summary>
+        </member>
+        <member name="P:Thuria.Zitidar.Akka.Service.ThuriaActorSystemBase.IsDisposing">
+            <summary>
+            Is Disposing indicator
+            </summary>
+        </member>
+        <member name="P:Thuria.Zitidar.Akka.Service.ThuriaActorSystemBase.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Thuria.Zitidar.Akka.Service.ThuriaActorSystemBase.ActorSystem">
+            <inheritdoc />
+        </member>
+        <member name="M:Thuria.Zitidar.Akka.Service.ThuriaActorSystemBase.Start">
+            <inheritdoc />
+        </member>
+        <member name="M:Thuria.Zitidar.Akka.Service.ThuriaActorSystemBase.Stop">
+            <inheritdoc />
+        </member>
         <member name="T:Thuria.Zitidar.Akka.Settings.ThuriaHoconLoader">
             <summary>
             Thuria Hocon Loader

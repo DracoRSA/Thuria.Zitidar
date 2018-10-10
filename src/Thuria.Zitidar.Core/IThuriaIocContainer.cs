@@ -9,6 +9,11 @@ namespace Thuria.Zitidar.Core
   public interface IThuriaIocContainer
   {
     /// <summary>
+    /// Underlying Raw Container
+    /// </summary>
+    object Container { get; }
+
+    /// <summary>
     /// Get an instance of type T from the container
     /// </summary>
     /// <typeparam name="T">Type</typeparam>

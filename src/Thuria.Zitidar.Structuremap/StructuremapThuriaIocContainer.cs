@@ -11,52 +11,58 @@ namespace Thuria.Zitidar.Structuremap
   /// <inheritdoc />
   public class StructuremapThuriaIocContainer : IThuriaIocContainer
   {
+    private readonly IContainer _rawContainer;
+
+    /// <summary>
+    /// Ioc Container Constructor
+    /// </summary>
+    /// <param name="iocContainer"></param>
     public StructuremapThuriaIocContainer(IContainer iocContainer)
     {
-      Container = iocContainer ?? throw new ArgumentNullException(nameof(iocContainer));
+      _rawContainer = iocContainer ?? throw new ArgumentNullException(nameof(iocContainer));
     }
 
     /// <summary>
     /// Structuremap Container
     /// </summary>
-    public IContainer Container { get; }
+    public object Container => _rawContainer;
 
     /// <inheritdoc />
     public T GetInstance<T>()
     {
-      return Container.TryGetInstance<T>();
+      return _rawContainer.TryGetInstance<T>();
     }
 
     /// <inheritdoc />
     public T GetInstance<T>(string instanceName)
     {
-      return Container.TryGetInstance<T>(instanceName);
+      return _rawContainer.TryGetInstance<T>(instanceName);
     }
 
     /// <inheritdoc />
     public object GetInstance(Type requiredType)
     {
-      return Container.TryGetInstance(requiredType);
+      return _rawContainer.TryGetInstance(requiredType);
     }
 
     /// <inheritdoc />
     public object GetInstance(Type requiredType, string instanceName)
     {
       return string.IsNullOrWhiteSpace(instanceName)
-                        ? Container.TryGetInstance(requiredType)
-                        : Container.TryGetInstance(requiredType, instanceName);
+                        ? _rawContainer.TryGetInstance(requiredType)
+                        : _rawContainer.TryGetInstance(requiredType, instanceName);
     }
 
     /// <inheritdoc />
     public IEnumerable<T> GetAllInstances<T>()
     {
-      return Container.GetAllInstances<T>();
+      return _rawContainer.GetAllInstances<T>();
     }
 
     /// <inheritdoc />
     public IEnumerable<object> GetAllInstances(Type instanceType)
     {
-      return Container.GetAllInstances(instanceType).Cast<object>();
+      return _rawContainer.GetAllInstances(instanceType).Cast<object>();
     }
   }
 }

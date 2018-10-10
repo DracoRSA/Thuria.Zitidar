@@ -7,7 +7,7 @@ namespace Thuria.Zitidar.Akka
   /// <summary>
   /// Thuria Actor System
   /// </summary>
-  public interface IThuriaActorSystem : IThuriaStartable, IThuriaStoppable, IDisposable
+  public interface IThuriaActorSystem : IThuriaStartable, IThuriaStoppable, IThuriaNamedInstance, IDisposable
   {
     /// <summary>
     /// Actor System
