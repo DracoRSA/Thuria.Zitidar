@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Thuria.Zitidar.Extensions
 {
@@ -7,6 +8,18 @@ namespace Thuria.Zitidar.Extensions
   /// </summary>
   public static class TypeExtensions
   {
+    private static readonly Dictionary<Type, Func<object>> DefaultValueGenerators = new Dictionary<Type, Func<object>>
+      {
+        { typeof(Guid), () => Guid.Empty },
+        { typeof(DateTime), () => default(DateTime) },
+        { typeof(int), () => default(int) },
+        { typeof(uint), () => default(uint) },
+        { typeof(long), () => default(long) },
+        { typeof(decimal), () => default(decimal) },
+        { typeof(float), () => default(float) },
+        { typeof(bool), () => default(bool) },
+      };
+
     /// <summary>
     /// Get Property Value
     /// </summary>
@@ -47,7 +60,7 @@ namespace Thuria.Zitidar.Extensions
     }
 
     /// <summary>
-    /// Determin if a Property exist on an object
+    /// Determine if a Property exist on an object
     /// </summary>
     /// <param name="currentObject">Object</param>
     /// <param name="propertyName">Property name</param>
@@ -58,6 +71,26 @@ namespace Thuria.Zitidar.Extensions
 
       var propertyInfo = currentObject.GetType().GetProperty(propertyName);
       return propertyInfo != null;
+    }
+
+    /// <summary>
+    /// Retrieve the Default Value for a Type
+    /// </summary>
+    /// <param name="objectType">Type</param>
+    /// <returns>Default Value or null</returns>
+    public static object GetDefaultData(this Type objectType)
+    {
+      if (objectType.IsGenericType && (objectType.GetGenericTypeDefinition() == typeof(IList<>)))
+      {
+        var listType         = typeof(List<>);
+        var listInternalType = objectType.GetGenericArguments()[0];
+        var genericType      = listType.MakeGenericType(new[] { listInternalType });
+        return Activator.CreateInstance(genericType);
+      }
+
+      return DefaultValueGenerators.ContainsKey(objectType) 
+                        ? DefaultValueGenerators[objectType]() 
+                        : null;
     }
   }
 }

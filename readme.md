@@ -43,6 +43,7 @@ The following extensions are part of the package:
 1. GetPropertyValue - Get the value of a specified property on an object
 2. SetPropertyValue - Set the value of property on a given object
 3. DoesPropertyExist - Determine if a property exists on a given object
+4. GetDefaultData - Retrieve the default data for a given Type
 
 ---
 Structuremap

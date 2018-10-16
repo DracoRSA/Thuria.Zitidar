@@ -1,6 +1,8 @@
 using System;
+using System.Collections.Generic;
 
 using NUnit.Framework;
+using FluentAssertions;
 
 namespace Thuria.Zitidar.Extensions.Tests
 {
@@ -88,6 +90,67 @@ namespace Thuria.Zitidar.Extensions.Tests
       var returnValue = fakeReflection.DoesPropertyExist("InvalidProperty");
       //---------------Test Result -----------------------
       Assert.IsFalse(returnValue);
+    }
+
+    [TestCase(typeof(string), default(string))]
+    [TestCase(typeof(int), default(int))]
+    [TestCase(typeof(uint), default(uint))]
+    [TestCase(typeof(long), default(long))]
+    [TestCase(typeof(float), default(float))]
+    [TestCase(typeof(bool), default(bool))]
+    public void GetDefaultData_ShouldReturnExpectedDefaultData(Type objectType, object expectedData)
+    {
+      //---------------Set up test pack-------------------
+      //---------------Assert Precondition----------------
+      //---------------Execute Test ----------------------
+      var defaultData = objectType.GetDefaultData();
+      //---------------Test Result -----------------------
+      defaultData.Should().Be(expectedData);
+    }
+
+    [Test]
+    public void GetDefaultData_GivenGuid_ShouldReturnEmptyGuid()
+    {
+      //---------------Set up test pack-------------------
+      //---------------Assert Precondition----------------
+      //---------------Execute Test ----------------------
+      var defaultData = typeof(Guid).GetDefaultData();
+      //---------------Test Result -----------------------
+      defaultData.Should().Be(Guid.Empty);
+    }
+
+    [Test]
+    public void GetDefaultData_GivenDateTime_ShouldReturnMinDate()
+    {
+      //---------------Set up test pack-------------------
+      //---------------Assert Precondition----------------
+      //---------------Execute Test ----------------------
+      var defaultData = typeof(DateTime).GetDefaultData();
+      //---------------Test Result -----------------------
+      defaultData.Should().Be(DateTime.MinValue);
+    }
+
+    [Test]
+    public void GetDefaultData_GivenDecimal_ShouldReturnDefaultDecimalValue()
+    {
+      //---------------Set up test pack-------------------
+      //---------------Assert Precondition----------------
+      //---------------Execute Test ----------------------
+      var defaultData = typeof(decimal).GetDefaultData();
+      //---------------Test Result -----------------------
+      defaultData.Should().Be(default(decimal));
+    }
+
+    [Test]
+    public void GetDefaultData_GivenIList_ShouldReturnEmptyList()
+    {
+      //---------------Set up test pack-------------------
+      //---------------Assert Precondition----------------
+      //---------------Execute Test ----------------------
+      var defaultData = typeof(IList<FakeReflection>).GetDefaultData();
+      //---------------Test Result -----------------------
+      defaultData.Should().NotBeNull();
+      defaultData.Should().BeAssignableTo<IList<FakeReflection>>();
     }
   }
 }
