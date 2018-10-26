@@ -30,4 +30,25 @@
     /// </summary>
     Exception
   }
+
+  /// <summary>
+  /// Thuria Settings Type
+  /// </summary>
+  public enum ThuriaSettingsType
+  {
+    /// <summary>
+    /// JSON Settings File
+    /// </summary>
+    JsonFile,
+
+    /// <summary>
+    /// Environment Variables
+    /// </summary>
+    Environment,
+
+    /// <summary>
+    /// Command Line
+    /// </summary>
+    CommandLine
+  }
 }

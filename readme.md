@@ -12,10 +12,14 @@ Features
 * **Core** - A set of interfaces to allow for development against just an API using dependency injection
 * **Extensions** - Various extensions to just add functionality to types like DateTime, String, Type, etc
 * **Structuremap** - A set of additional functionality to add structuremap functionality to any application (Bootstrapper, IOC Container wrapper, etc)
+* **Settings** - A set of classes to implement the management of settings via Json, Environment Variables or Command Line options.
 * **Akka** - A set of functions and features to assist with creating an Actor System using [Akka.Net](http://getakka.net)
 
 Core
 ---
+
+Core containes all the required contracts and Enumeration required by these contracts.
+No concrete implementations are done in this package.
 
 ---
 Extensions
@@ -51,6 +55,7 @@ Structuremap
 
 The structuremap package provides the following functionality:
 
+* StructuremapThuriaIocContainer - A concrete implementation opf the IThuriaIocContainer interface specifically aimed at Structuremap.
 * StructuremapThuriaBootstrapper - The structuremap bootstrapper allows you to bootstrap the Structuremap IOC Container of an application using a builder interface. The following functionality is provided:  
 
         * WithScannningOfFiles - Scan files
@@ -68,6 +73,10 @@ Example:
                                 .Build();
 
 * StructuremapThuriaIocContainer
+
+---
+Settings
+---
 
 ---
 Akka
