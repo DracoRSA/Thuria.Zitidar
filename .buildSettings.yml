@@ -3,7 +3,7 @@ CONFIGURATION: Debug
 NUGETPACKAGES:
   - Core:
     Name: Zitidar.Core
-    Version: 0.0.12
+    Version: 0.0.13
     Location: src/Thuria.Zitidar.Core
     IsBeta: true
   - Extensions:
