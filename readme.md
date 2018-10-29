@@ -18,7 +18,7 @@ Features
 Core
 ---
 
-Core containes all the required contracts and Enumeration required by these contracts.
+Core containes all the Thuria Zitidar Framework contracts and the relevant Enumerations required by these contracts.
 No concrete implementations are done in this package.
 
 ---
@@ -78,10 +78,19 @@ Example:
 Settings
 ---
 
+The Settings package contains the following settings implementations:
+
+* **Base Settings**
+1. **ApplicationName** - Application Name
+2. **StartDebugMode** - On startup immediately launch the debugger
+
+* **Database Settings**
+1. **GetConnectionString(string dbContextName)** - Get the database connetion string matching the provided Database Context Name.
+
 ---
 Akka
 ---
 
-To be completed
+In development
 
 ---

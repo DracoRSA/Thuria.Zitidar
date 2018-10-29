@@ -118,11 +118,18 @@
         </member>
         <member name="M:Thuria.Zitidar.Extensions.TypeExtensions.DoesPropertyExist(System.Object,System.String)">
             <summary>
-            Determin if a Property exist on an object
+            Determine if a Property exist on an object
             </summary>
             <param name="currentObject">Object</param>
             <param name="propertyName">Property name</param>
             <returns></returns>
+        </member>
+        <member name="M:Thuria.Zitidar.Extensions.TypeExtensions.GetDefaultData(System.Type)">
+            <summary>
+            Retrieve the Default Value for a Type
+            </summary>
+            <param name="objectType">Type</param>
+            <returns>Default Value or null</returns>
         </member>
     </members>
 </doc>

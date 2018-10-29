@@ -16,6 +16,11 @@ NUGETPACKAGES:
     Version: 0.0.12
     Location: src/Thuria.Zitidar.Structuremap
     IsBeta: true
+  - Settings:
+    Name: Zitidar.Settings
+    Version: 0.0.1
+    Location: src/Thuria.Zitidar.Settings
+    IsBeta: true
   - Akka:
     Name: Zitidar.Akka
     Version: 0.0.12

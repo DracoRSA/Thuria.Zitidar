@@ -49,6 +49,11 @@
     /// <summary>
     /// Command Line
     /// </summary>
-    CommandLine
+    CommandLine,
+
+    /// <summary>
+    /// Json File and Environment Variables
+    /// </summary>
+    JsonFileEnvironment
   }
 }

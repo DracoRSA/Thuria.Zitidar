@@ -1,5 +1,4 @@
 ﻿using System;
-using System.IO;
 using System.Linq;
 
 using Microsoft.Extensions.Configuration;
@@ -37,10 +36,24 @@ namespace Thuria.Zitidar.Settings
       {
         case ThuriaSettingsType.JsonFile:
           _configurationRoot = new ConfigurationBuilder()
-                                              .SetBasePath(Directory.GetCurrentDirectory())
-                                              .AddJsonFile(SettingFilename, optional: false, reloadOnChange: true)
-                                              .AddEnvironmentVariables()
-                                              .Build();
+                        .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
+                        .AddJsonFile(SettingFilename, optional: false, reloadOnChange: true)
+                        .Build();
+          break;
+
+        case ThuriaSettingsType.Environment:
+          _configurationRoot = new ConfigurationBuilder()
+                        .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
+                        .AddEnvironmentVariables()
+                        .Build();
+          break;
+
+        case ThuriaSettingsType.JsonFileEnvironment:
+          _configurationRoot = new ConfigurationBuilder()
+                        .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
+                        .AddJsonFile(SettingFilename, optional: false, reloadOnChange: true)
+                        .AddEnvironmentVariables()
+                        .Build();
           break;
 
         default:
