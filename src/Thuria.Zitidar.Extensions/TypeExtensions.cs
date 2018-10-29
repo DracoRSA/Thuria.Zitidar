@@ -25,7 +25,7 @@ namespace Thuria.Zitidar.Extensions
     /// </summary>
     /// <param name="currentObject">Current Object to get the value from</param>
     /// <param name="propertyName">Property Name</param>
-    /// <returns></returns>
+    /// <returns>The value of the specified property</returns>
     public static object GetPropertyValue(this object currentObject, string propertyName)
     {
       var propertyInfo = currentObject.GetType().GetProperty(propertyName);
@@ -64,7 +64,7 @@ namespace Thuria.Zitidar.Extensions
     /// </summary>
     /// <param name="currentObject">Object</param>
     /// <param name="propertyName">Property name</param>
-    /// <returns></returns>
+    /// <returns>A boolean indicating whether the property exists on the given object</returns>
     public static bool DoesPropertyExist(this object currentObject, string propertyName)
     {
       if (currentObject == null) { throw new ArgumentNullException(nameof(currentObject)); }

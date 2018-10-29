@@ -34,6 +34,31 @@
             Log Exception messages
             </summary>
         </member>
+        <member name="T:Thuria.Zitidar.Core.ThuriaSettingsType">
+            <summary>
+            Thuria Settings Type
+            </summary>
+        </member>
+        <member name="F:Thuria.Zitidar.Core.ThuriaSettingsType.JsonFile">
+            <summary>
+            JSON Settings File
+            </summary>
+        </member>
+        <member name="F:Thuria.Zitidar.Core.ThuriaSettingsType.Environment">
+            <summary>
+            Environment Variables
+            </summary>
+        </member>
+        <member name="F:Thuria.Zitidar.Core.ThuriaSettingsType.CommandLine">
+            <summary>
+            Command Line
+            </summary>
+        </member>
+        <member name="F:Thuria.Zitidar.Core.ThuriaSettingsType.JsonFileEnvironment">
+            <summary>
+            Json File and Environment Variables
+            </summary>
+        </member>
         <member name="T:Thuria.Zitidar.Core.IThuriaBootstrapper">
             <summary>
             Thuria Bootstrapper
@@ -149,6 +174,43 @@
         <member name="M:Thuria.Zitidar.Core.IThuriaStoppable.Stop">
             <summary>
             Stop
+            </summary>
+        </member>
+        <member name="T:Thuria.Zitidar.Core.IThuriaDatabaseSettings">
+            <summary>
+            Thuria Database Settings
+            </summary>
+        </member>
+        <member name="M:Thuria.Zitidar.Core.IThuriaDatabaseSettings.GetConnectionString(System.String)">
+            <summary>
+            Retrieve the Connection String for the given Database Context Name
+            </summary>
+            <param name="dbContextName">Database Context Name</param>
+            <returns></returns>
+        </member>
+        <member name="T:Thuria.Zitidar.Core.IThuriaSettings">
+            <summary>
+            Thuria Settings
+            </summary>
+        </member>
+        <member name="P:Thuria.Zitidar.Core.IThuriaSettings.ApplicationName">
+            <summary>
+            Application Name
+            </summary>
+        </member>
+        <member name="P:Thuria.Zitidar.Core.IThuriaSettings.StartDebugMode">
+            <summary>
+            Start the Application in Debug Mode indicator
+            </summary>
+        </member>
+        <member name="P:Thuria.Zitidar.Core.IThuriaSettings.SettingsType">
+            <summary>
+            Settings Type
+            </summary>
+        </member>
+        <member name="P:Thuria.Zitidar.Core.IThuriaSettings.SettingFilename">
+            <summary>
+            Settings Filename
             </summary>
         </member>
     </members>
