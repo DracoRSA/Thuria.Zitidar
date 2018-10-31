@@ -1,9 +1,9 @@
-VERSION: 0.0.12
+VERSION: 0.0.1
 CONFIGURATION: Debug
 NUGETPACKAGES:
   - Core:
     Name: Zitidar.Core
-    Version: 0.0.13
+    Version: 0.0.14
     Location: src/Thuria.Zitidar.Core
     IsBeta: true
   - Extensions:
@@ -18,11 +18,16 @@ NUGETPACKAGES:
     IsBeta: true
   - Settings:
     Name: Zitidar.Settings
-    Version: 0.0.1
+    Version: 0.0.2
     Location: src/Thuria.Zitidar.Settings
     IsBeta: true
   - Akka:
     Name: Zitidar.Akka
     Version: 0.0.12
     Location: src/Thuria.Zitidar.Akka
+    IsBeta: true  
+  - Logging:
+    Name: Zitidar.Logging
+    Version: 0.0.1
+    Location: src/Thuria.Zitidar.Logging
     IsBeta: true

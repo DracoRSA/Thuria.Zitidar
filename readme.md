@@ -14,6 +14,7 @@ Features
 * **Structuremap** - A set of additional functionality to add structuremap functionality to any application (Bootstrapper, IOC Container wrapper, etc)
 * **Settings** - A set of classes to implement the management of settings via Json, Environment Variables or Command Line options.
 * **Akka** - A set of functions and features to assist with creating an Actor System using [Akka.Net](http://getakka.net)
+* **Logging** - A NLog implementation of the IThuriaLogger that can be used by an application to add logging.
 
 Core
 ---

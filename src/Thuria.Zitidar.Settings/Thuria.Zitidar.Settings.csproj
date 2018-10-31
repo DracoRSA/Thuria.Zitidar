@@ -10,6 +10,7 @@
     <Authors>Johan Dercksen</Authors>
     <Company>Draco</Company>
     <Product>Thuria</Product>
+    <Description>A set of classes to implement the management of settings via Json, Environment Variables or Command Line options.</Description>
   </PropertyGroup>
 
   <ItemGroup>

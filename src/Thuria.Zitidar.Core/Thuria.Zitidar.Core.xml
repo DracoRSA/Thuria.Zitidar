@@ -128,19 +128,6 @@
             <param name="instanceType">Instance Type</param>
             <returns>A list of instances implementing Type</returns>
         </member>
-        <member name="T:Thuria.Zitidar.Core.IThuriaLogger">
-            <summary>
-            Thuria Logger
-            </summary>
-        </member>
-        <member name="M:Thuria.Zitidar.Core.IThuriaLogger.LogMessage(Thuria.Zitidar.Core.LogSeverity,System.String,System.Exception)">
-            <summary>
-            Log a message
-            </summary>
-            <param name="logSeverity">Log Severity</param>
-            <param name="newMessage">Log message</param>
-            <param name="exceptionMessage">Exception (optional)</param>
-        </member>
         <member name="T:Thuria.Zitidar.Core.IThuriaNamedInstance">
             <summary>
             Thuria Named Instance
@@ -175,6 +162,19 @@
             <summary>
             Stop
             </summary>
+        </member>
+        <member name="T:Thuria.Zitidar.Core.IThuriaLogger">
+            <summary>
+            Thuria Logger
+            </summary>
+        </member>
+        <member name="M:Thuria.Zitidar.Core.IThuriaLogger.LogMessage(Thuria.Zitidar.Core.LogSeverity,System.String,System.Exception)">
+            <summary>
+            Log a message
+            </summary>
+            <param name="logSeverity">Log Severity</param>
+            <param name="logMessage">Log message</param>
+            <param name="exceptionMessage">Exception (optional)</param>
         </member>
         <member name="T:Thuria.Zitidar.Core.IThuriaDatabaseSettings">
             <summary>

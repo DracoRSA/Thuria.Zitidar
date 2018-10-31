@@ -11,8 +11,8 @@ namespace Thuria.Zitidar.Core
     /// Log a message
     /// </summary>
     /// <param name="logSeverity">Log Severity</param>
-    /// <param name="newMessage">Log message</param>
+    /// <param name="logMessage">Log message</param>
     /// <param name="exceptionMessage">Exception (optional)</param>
-    void LogMessage(LogSeverity logSeverity, string newMessage, Exception exceptionMessage = null);
+    void LogMessage(LogSeverity logSeverity, string logMessage, Exception exceptionMessage = null);
   }
 }

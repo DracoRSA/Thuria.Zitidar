@@ -8,7 +8,10 @@
     <PackageLicenseUrl>https://github.com/DracoRSA/Thuria.Zitidar/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/DracoRSA/Thuria.Zitidar</PackageProjectUrl>
     <RepositoryUrl>https://github.com/DracoRSA/Thuria.Zitidar</RepositoryUrl>
-    <PackageTags>Thuria Core Akka</PackageTags>
+    <PackageTags>Thuria Akka</PackageTags>
+    <Description>Base Akka.Net interfaces and implementations for the Thuria Framework
+A set of functions and features to assist with creating an Actor System using [Akka.Net](http://getakka.net)</Description>
+    <Version>0.0.1</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
