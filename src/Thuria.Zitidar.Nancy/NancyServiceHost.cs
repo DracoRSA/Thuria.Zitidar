@@ -10,7 +10,7 @@ namespace Thuria.Zitidar.Nancy
   /// <summary>
   /// Nancy Service Host
   /// </summary>
-  public class NancyServiceHost : IThuriaNamedInstance, IThuriaStartable, IThuriaStoppable
+  public class NancyServiceHost : IThuriaNamedInstance, IThuriaStartable, IThuriaStoppable, IDisposable
   {
     private bool _isDisposing;
     private IWebHost _webHost;

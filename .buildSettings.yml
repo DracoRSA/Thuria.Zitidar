@@ -33,6 +33,6 @@ NUGETPACKAGES:
     IsBeta: true
   - Nancy:
     Name: Zitidar.Nancy
-    Version: 0.0.3
+    Version: 0.0.4
     Location: src/Thuria.Zitidar.Nancy
     IsBeta: true

@@ -100,8 +100,6 @@ classes have been provided:
 * NancyServiceHost - A Startable, Stoppable service to easily Start, Stop and Self Host a Nancy Service
 * NancyStartup - Basic Nancy Startup functionality used to start a self hosted nancy Service
 
-In development
-
 ---
 
 ---
