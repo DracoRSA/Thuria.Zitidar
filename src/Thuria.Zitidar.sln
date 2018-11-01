@@ -27,7 +27,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Thuria.Zitidar.Settings", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Thuria.Zitidar.Settings.Tests", "Thuria.Zitidar.Settings.Tests\Thuria.Zitidar.Settings.Tests.csproj", "{81FC0118-E6FC-4D6D-AD4C-A4908E9CB074}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Thuria.Zitidar.Logging", "Thuria.Zitidar.Logging\Thuria.Zitidar.Logging.csproj", "{177F0A8C-325A-410A-B6F5-4C0FB9823623}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Thuria.Zitidar.Logging", "Thuria.Zitidar.Logging\Thuria.Zitidar.Logging.csproj", "{177F0A8C-325A-410A-B6F5-4C0FB9823623}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Thuria.Zitidar.Nancy", "Thuria.Zitidar.Nancy\Thuria.Zitidar.Nancy.csproj", "{9D6AB4B3-F4F0-4573-912C-B59EBBD5F760}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Thuria.Zitidar.Nancy.Tests", "Thuria.Zitidar.Nancy.Tests\Thuria.Zitidar.Nancy.Tests.csproj", "{21BB10B1-AA8B-4220-B03E-1D95B1BC802D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +79,14 @@ Global
 		{177F0A8C-325A-410A-B6F5-4C0FB9823623}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{177F0A8C-325A-410A-B6F5-4C0FB9823623}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{177F0A8C-325A-410A-B6F5-4C0FB9823623}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D6AB4B3-F4F0-4573-912C-B59EBBD5F760}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D6AB4B3-F4F0-4573-912C-B59EBBD5F760}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D6AB4B3-F4F0-4573-912C-B59EBBD5F760}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D6AB4B3-F4F0-4573-912C-B59EBBD5F760}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21BB10B1-AA8B-4220-B03E-1D95B1BC802D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21BB10B1-AA8B-4220-B03E-1D95B1BC802D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21BB10B1-AA8B-4220-B03E-1D95B1BC802D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21BB10B1-AA8B-4220-B03E-1D95B1BC802D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

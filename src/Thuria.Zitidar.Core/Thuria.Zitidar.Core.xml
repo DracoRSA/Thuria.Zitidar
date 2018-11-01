@@ -188,6 +188,16 @@
             <param name="dbContextName">Database Context Name</param>
             <returns></returns>
         </member>
+        <member name="T:Thuria.Zitidar.Core.IThuriaNancySettings">
+            <summary>
+            Thuria Nancy Settings
+            </summary>
+        </member>
+        <member name="P:Thuria.Zitidar.Core.IThuriaNancySettings.HostBaseUri">
+            <summary>
+            Host Base URI
+            </summary>
+        </member>
         <member name="T:Thuria.Zitidar.Core.IThuriaSettings">
             <summary>
             Thuria Settings

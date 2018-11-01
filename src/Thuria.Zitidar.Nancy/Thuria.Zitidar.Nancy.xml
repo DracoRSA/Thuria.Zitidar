@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Thuria.Zitidar.Nancy</name>
+    </assembly>
+    <members>
+        <member name="T:Thuria.Zitidar.Nancy.NancyBootstrapper">
+            <summary>
+            Nancy Bootstrapper
+            </summary>
+        </member>
+        <member name="M:Thuria.Zitidar.Nancy.NancyBootstrapper.#ctor(StructureMap.IContainer,System.Boolean)">
+            <summary>
+            Nancy Bootstrapper Constructor
+            </summary>
+            <param name="structuremapContainer"></param>
+            <param name="enableTracing"></param>
+        </member>
+        <member name="M:Thuria.Zitidar.Nancy.NancyBootstrapper.Configure(Nancy.Configuration.INancyEnvironment)">
+            <summary>
+            Configure the Nancy Bootstrapper
+            </summary>
+            <param name="environment"></param>
+        </member>
+        <member name="M:Thuria.Zitidar.Nancy.NancyBootstrapper.RequestStartup(StructureMap.IContainer,Nancy.Bootstrapper.IPipelines,Nancy.NancyContext)">
+            <summary>
+            Request Startup
+            </summary>
+            <param name="container">Structuremap Container</param>
+            <param name="pipelines">Nancy Pipelines</param>
+            <param name="context">Nancy Context</param>
+        </member>
+        <member name="T:Thuria.Zitidar.Nancy.NancyServiceHost">
+            <summary>
+            Nancy Service Host
+            </summary>
+        </member>
+        <member name="M:Thuria.Zitidar.Nancy.NancyServiceHost.#ctor(Thuria.Zitidar.Core.IThuriaIocContainer)">
+            <summary>
+            Nancy Service Host constructor
+            </summary>
+            <param name="iocContainer"></param>
+        </member>
+        <member name="M:Thuria.Zitidar.Nancy.NancyServiceHost.Dispose">
+            <summary>
+            Clean and Dispose the current object
+            </summary>
+        </member>
+        <member name="P:Thuria.Zitidar.Nancy.NancyServiceHost.Name">
+            <inheritdoc />
+        </member>
+        <member name="M:Thuria.Zitidar.Nancy.NancyServiceHost.Start">
+            <inheritdoc />
+        </member>
+        <member name="M:Thuria.Zitidar.Nancy.NancyServiceHost.Stop">
+            <inheritdoc />
+        </member>
+        <member name="T:Thuria.Zitidar.Nancy.NancyStartup">
+            <summary>
+            Basic Nancy Startup class
+            </summary>
+        </member>
+        <member name="P:Thuria.Zitidar.Nancy.NancyStartup.IocContainer">
+            <summary>
+            Thuria Ioc Container
+            </summary>
+        </member>
+        <member name="M:Thuria.Zitidar.Nancy.NancyStartup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Configure the relevant Service(s)
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:Thuria.Zitidar.Nancy.NancyStartup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment,Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Configure the Container
+            </summary>
+            <param name="applicationBuilder">Application Builder</param>
+            <param name="hostingEnvironment">Hosting Environment</param>
+            <param name="loggerFactory">Logger Factory</param>
+        </member>
+    </members>
+</doc>

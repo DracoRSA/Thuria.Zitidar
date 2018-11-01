@@ -3,31 +3,36 @@ CONFIGURATION: Debug
 NUGETPACKAGES:
   - Core:
     Name: Zitidar.Core
-    Version: 0.0.14
+    Version: 0.0.16
     Location: src/Thuria.Zitidar.Core
     IsBeta: true
   - Extensions:
     Name: Zitidar.Extensions
-    Version: 0.0.12
+    Version: 0.0.13
     Location: src/Thuria.Zitidar.Extensions
     IsBeta: true
   - Structuremap:
     Name: Zitidar.Structuremap
-    Version: 0.0.12
+    Version: 0.0.13
     Location: src/Thuria.Zitidar.Structuremap
     IsBeta: true
   - Settings:
     Name: Zitidar.Settings
-    Version: 0.0.2
+    Version: 0.0.4
     Location: src/Thuria.Zitidar.Settings
     IsBeta: true
   - Akka:
     Name: Zitidar.Akka
-    Version: 0.0.12
+    Version: 0.0.13
     Location: src/Thuria.Zitidar.Akka
     IsBeta: true  
   - Logging:
     Name: Zitidar.Logging
-    Version: 0.0.1
+    Version: 0.0.2
     Location: src/Thuria.Zitidar.Logging
+    IsBeta: true
+  - Nancy:
+    Name: Zitidar.Nancy
+    Version: 0.0.3
+    Location: src/Thuria.Zitidar.Nancy
     IsBeta: true

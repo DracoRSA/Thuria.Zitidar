@@ -15,6 +15,7 @@ Features
 * **Settings** - A set of classes to implement the management of settings via Json, Environment Variables or Command Line options.
 * **Akka** - A set of functions and features to assist with creating an Actor System using [Akka.Net](http://getakka.net)
 * **Logging** - A NLog implementation of the IThuriaLogger that can be used by an application to add logging.
+* **Nancy** - A base implementation of hosting a Nancy Service in an application using StructureMap and Thuria
 
 Core
 ---
@@ -87,6 +88,21 @@ The Settings package contains the following settings implementations:
 
 * **Database Settings**
 1. **GetConnectionString(string dbContextName)** - Get the database connetion string matching the provided Database Context Name.
+
+---
+Nancy
+---
+
+A base implementation of hosting a Nancy Service in an application using StructureMap and Thuria. The following
+classes have been provided:
+
+* NancyBootstrapper - A StructureMap based bootstrapper for the Nancy Framework
+* NancyServiceHost - A Startable, Stoppable service to easily Start, Stop and Self Host a Nancy Service
+* NancyStartup - Basic Nancy Startup functionality used to start a self hosted nancy Service
+
+In development
+
+---
 
 ---
 Akka
