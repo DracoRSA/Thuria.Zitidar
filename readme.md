@@ -4,7 +4,7 @@ Thuria - Zitidar
 Overview
 ---
 
-The Thuria Zitidar set of packages give core based functionality to any Dotnet Core project.
+Thuria Zitidar is a set of nuget packages that implements some of the basic plumbing that is required to create a Dotnet Core application that could be using a combination of Dependency Injection, the Akka Actor Framework, and Database Access or all of it.
 
 Features
 ---
