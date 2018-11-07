@@ -10,7 +10,7 @@
     <PackageTags>Thuria Core</PackageTags>
     <PackageLicenseUrl>https://github.com/DracoRSA/Thuria.Zitidar/blob/master/LICENSE</PackageLicenseUrl>
     <Description>A set of interfaces to allow for development against just an API specific to the Thuria Framework using dependency injection</Description>
-    <Version>0.0.1</Version>
+    <Version>0.0.16-beta</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

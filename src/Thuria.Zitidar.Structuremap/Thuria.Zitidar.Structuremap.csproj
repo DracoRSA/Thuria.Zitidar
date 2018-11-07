@@ -9,7 +9,7 @@
     <PackageProjectUrl>https://github.com/DracoRSA/Thuria.Zitidar</PackageProjectUrl>
     <RepositoryUrl>https://github.com/DracoRSA/Thuria.Zitidar</RepositoryUrl>
     <PackageTags>Thuria Structuremap</PackageTags>
-    <Version>0.0.1</Version>
+    <Version>0.0.13-beta</Version>
     <Description>A set of additional functionality to add structuremap functionality to any application (Bootstrapper, IOC Container wrapper, etc)</Description>
     <RepositoryType>git</RepositoryType>
   </PropertyGroup>

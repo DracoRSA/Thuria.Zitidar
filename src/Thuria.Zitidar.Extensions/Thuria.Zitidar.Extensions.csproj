@@ -9,7 +9,7 @@
     <PackageProjectUrl>https://github.com/DracoRSA/Thuria.Zitidar</PackageProjectUrl>
     <RepositoryUrl>https://github.com/DracoRSA/Thuria.Zitidar</RepositoryUrl>
     <PackageLicenseUrl>https://github.com/DracoRSA/Thuria.Zitidar/blob/master/LICENSE</PackageLicenseUrl>
-    <Version>0.0.1</Version>
+    <Version>0.0.13-beta</Version>
     <Description>Various extensions to just add functionality to types like DateTime, String, Type, etc</Description>
   </PropertyGroup>
 
