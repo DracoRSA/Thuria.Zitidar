@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Thuria.Zitidar.Serialization.Nancy</name>
+    </assembly>
+    <members>
+        <member name="T:Thuria.Zitidar.Serialization.Nancy.IThuriaNancySerializer">
+            <summary>
+            Thuria Nancy Serializer
+            </summary>
+        </member>
+        <member name="T:Thuria.Zitidar.Serialization.Nancy.ThuriaNancyJsonSerializer">
+            <summary>
+            Thuria Nancy Json Serializer
+            </summary>
+        </member>
+        <member name="M:Thuria.Zitidar.Serialization.Nancy.ThuriaNancyJsonSerializer.#ctor(Thuria.Zitidar.Core.IThuriaSerializerSettings)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="serializerSettings">Serializer Settings</param>
+        </member>
+        <member name="P:Thuria.Zitidar.Serialization.Nancy.ThuriaNancyJsonSerializer.Extensions">
+            <summary>
+            Serializer Extensions
+            </summary>
+        </member>
+        <member name="M:Thuria.Zitidar.Serialization.Nancy.ThuriaNancyJsonSerializer.CanSerialize(Nancy.Responses.Negotiation.MediaRange)">
+            <summary>
+            Determine if the Media Can Serialize
+            </summary>
+            <param name="mediaRange">Media Range</param>
+            <returns>A boolean indicating if serialization can be done or not</returns>
+        </member>
+        <member name="M:Thuria.Zitidar.Serialization.Nancy.ThuriaNancyJsonSerializer.CanDeserialize(Nancy.Responses.Negotiation.MediaRange,Nancy.ModelBinding.BindingContext)">
+            <summary>
+            Determine if the Media Can Deserialize
+            </summary>
+            <param name="mediaRange">Media Range</param>
+            <param name="context">Binding Context</param>
+            <returns>A boolean indicating if deserialization can be done or not</returns>
+        </member>
+        <member name="M:Thuria.Zitidar.Serialization.Nancy.ThuriaNancyJsonSerializer.Serialize``1(Nancy.Responses.Negotiation.MediaRange,``0,System.IO.Stream)">
+            <summary>
+            Serialize the given model
+            </summary>
+            <typeparam name="TModel">Model Type</typeparam>
+            <param name="mediaRange">Media</param>
+            <param name="model">Model to serialize</param>
+            <param name="outputStream">Output stream the serialization will be written to</param>
+        </member>
+        <member name="M:Thuria.Zitidar.Serialization.Nancy.ThuriaNancyJsonSerializer.Deserialize(Nancy.Responses.Negotiation.MediaRange,System.IO.Stream,Nancy.ModelBinding.BindingContext)">
+            <summary>
+            Deserialize the Stream 
+            </summary>
+            <param name="mediaRange">Media</param>
+            <param name="bodyStream">Stream of data to deserialize</param>
+            <param name="context">Binding Context</param>
+            <returns>Deserialized object</returns>
+        </member>
+    </members>
+</doc>
