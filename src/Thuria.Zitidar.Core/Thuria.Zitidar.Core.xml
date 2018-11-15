@@ -176,6 +176,110 @@
             <param name="logMessage">Log message</param>
             <param name="exceptionMessage">Exception (optional)</param>
         </member>
+        <member name="T:Thuria.Zitidar.Core.IThuriaSerializer">
+            <summary>
+            Thuria Serializer
+            </summary>
+        </member>
+        <member name="M:Thuria.Zitidar.Core.IThuriaSerializer.DeserializeObject``1(System.String,System.Boolean)">
+            <summary>
+            Deserialize an object
+            </summary>
+            <typeparam name="T">Object Type</typeparam>
+            <param name="serializationString">Serialization String</param>
+            <param name="throwException">Throw Exception on failure indicator (Default = false)</param>
+            <returns>
+            If serialization fails and throwException is false, a null is returned
+            If serialization fails and throwException is true, an exception is thrown with the error details
+            A newly created object of type with its data deserialized from the input string
+            </returns>
+        </member>
+        <member name="M:Thuria.Zitidar.Core.IThuriaSerializer.DeserializeObject(System.String,System.Boolean)">
+            <summary>
+            Deserialize an object
+            </summary>
+            <param name="serializationString">Serialization String</param>
+            <param name="throwException">Throw Exception on failure indicator (Default = false)</param>
+            <returns>
+            If serialization fails and throwException is false, a null is returned
+            If serialization fails and throwException is true, an exception is thrown with the error details
+            A newly created object with its data deserialized from the input string
+            </returns>
+        </member>
+        <member name="M:Thuria.Zitidar.Core.IThuriaSerializer.SerializeObject``1(``0,Thuria.Zitidar.Core.IThuriaSerializerSettings)">
+            <summary>
+            Serialize an object to a string
+            </summary>
+            <typeparam name="T">Object Type</typeparam>
+            <param name="objectToSerialize">Object to serialize</param>
+            <param name="serializerSettings">Serializer Settings (Optional)</param>
+            <returns>String representation of the object</returns>
+        </member>
+        <member name="T:Thuria.Zitidar.Core.IThuriaSerializerSettings">
+            <summary>
+            Thuria Serializer Settings (Based on the Newtonsoft.JSON serialization framework />
+            </summary>
+        </member>
+        <member name="P:Thuria.Zitidar.Core.IThuriaSerializerSettings.ConstructorHandling">
+            <summary>
+            Constructor Handling
+            </summary>
+        </member>
+        <member name="P:Thuria.Zitidar.Core.IThuriaSerializerSettings.ContractResolver">
+            <summary>
+            Contract Resolver
+            </summary>
+        </member>
+        <member name="P:Thuria.Zitidar.Core.IThuriaSerializerSettings.TypeNameHandling">
+            <summary>
+            Type Name Handling
+            </summary>
+        </member>
+        <member name="P:Thuria.Zitidar.Core.IThuriaSerializerSettings.TypeNameAssemblyFormatHandling">
+            <summary>
+            Type Name Assembly Format Handling
+            </summary>
+        </member>
+        <member name="P:Thuria.Zitidar.Core.IThuriaSerializerSettings.Formatting">
+            <summary>
+            Formatting
+            </summary>
+        </member>
+        <member name="P:Thuria.Zitidar.Core.IThuriaSerializerSettings.NullValueHandling">
+            <summary>
+            Null Value handling
+            </summary>
+        </member>
+        <member name="P:Thuria.Zitidar.Core.IThuriaSerializerSettings.ReferenceLoopHandling">
+            <summary>
+            Reference Loop Handling
+            </summary>
+        </member>
+        <member name="P:Thuria.Zitidar.Core.IThuriaSerializerSettings.PreserveReferencesHandling">
+            <summary>
+            Preserve References Handling
+            </summary>
+        </member>
+        <member name="P:Thuria.Zitidar.Core.IThuriaSerializerSettings.DateTimeZoneHandling">
+            <summary>
+            Date Time Zone Handling
+            </summary>
+        </member>
+        <member name="P:Thuria.Zitidar.Core.IThuriaSerializerSettings.DateFormatHandling">
+            <summary>
+            Date Format Handling
+            </summary>
+        </member>
+        <member name="P:Thuria.Zitidar.Core.IThuriaSerializerSettings.SerializationBinder">
+            <summary>
+            Serialization Binder
+            </summary>
+        </member>
+        <member name="P:Thuria.Zitidar.Core.IThuriaSerializerSettings.Converters">
+            <summary>
+            Converters
+            </summary>
+        </member>
         <member name="T:Thuria.Zitidar.Core.IThuriaDatabaseSettings">
             <summary>
             Thuria Database Settings

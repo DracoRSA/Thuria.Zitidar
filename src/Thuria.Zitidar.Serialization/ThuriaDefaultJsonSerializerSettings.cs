@@ -13,6 +13,7 @@ namespace Thuria.Zitidar.Serialization
     public ThuriaDefaultJsonSerializerSettings()
     {
       ConstructorHandling            = Newtonsoft.Json.ConstructorHandling.Default;
+      ContractResolver               = new Newtonsoft.Json.Serialization.DefaultContractResolver();
       TypeNameHandling               = Newtonsoft.Json.TypeNameHandling.All;
       TypeNameAssemblyFormatHandling = Newtonsoft.Json.TypeNameAssemblyFormatHandling.Simple;
       Formatting                     = Newtonsoft.Json.Formatting.None;

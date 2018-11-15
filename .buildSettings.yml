@@ -33,16 +33,16 @@ NUGETPACKAGES:
     IsBeta: true
   - Nancy:
     Name: Zitidar.Nancy
-    Version: 0.0.5
+    Version: 0.0.6
     Location: src/Thuria.Zitidar.Nancy
     IsBeta: true
   - Serialization:
     Name: Zitidar.Serialization
-    Version: 0.0.1
+    Version: 0.0.2
     Location: src/Thuria.Zitidar.Serialization
     IsBeta: true
   - NancySerialization:
     Name: Zitidar.Serialization.Nancy
-    Version: 0.0.1
+    Version: 0.0.2
     Location: src/Thuria.Zitidar.Serialization.Nancy
     IsBeta: true

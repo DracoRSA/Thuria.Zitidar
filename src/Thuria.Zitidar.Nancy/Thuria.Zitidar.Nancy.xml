@@ -4,6 +4,241 @@
         <name>Thuria.Zitidar.Nancy</name>
     </assembly>
     <members>
+        <member name="T:Thuria.Zitidar.Nancy.IThuriaHttpServiceError">
+            <summary>
+            Thuria Http Service Error
+            </summary>
+        </member>
+        <member name="P:Thuria.Zitidar.Nancy.IThuriaHttpServiceError.HttpServiceError">
+            <summary>
+            Http Service Error
+            </summary>
+        </member>
+        <member name="T:Thuria.Zitidar.Nancy.ThuriaHttpServiceError">
+            <summary>
+            Thuria Http Service Error
+            </summary>
+        </member>
+        <member name="P:Thuria.Zitidar.Nancy.ThuriaHttpServiceError.HttpStatusCode">
+            <summary>
+            Http Status Code
+            </summary>
+        </member>
+        <member name="P:Thuria.Zitidar.Nancy.ThuriaHttpServiceError.ServiceErrorModel">
+            <summary>
+            Thuria Service Error Model
+            </summary>
+        </member>
+        <member name="T:Thuria.Zitidar.Nancy.ThuriaServiceErrorModel">
+            <summary>
+            Thuria Service Error Model
+            </summary>
+        </member>
+        <member name="P:Thuria.Zitidar.Nancy.ThuriaServiceErrorModel.TimeStamp">
+            <summary>
+            Error Time stamp
+            </summary>
+        </member>
+        <member name="P:Thuria.Zitidar.Nancy.ThuriaServiceErrorModel.Details">
+            <summary>
+            Error details
+            </summary>
+        </member>
+        <member name="P:Thuria.Zitidar.Nancy.ThuriaServiceErrorModel.StackTrace">
+            <summary>
+            Error Stack Trace
+            </summary>
+        </member>
+        <member name="T:Thuria.Zitidar.Nancy.ThuriaCustomErrorHandler">
+            <summary>
+            Thuria Custom Error Handler
+            </summary>
+        </member>
+        <member name="M:Thuria.Zitidar.Nancy.ThuriaCustomErrorHandler.Enable(Nancy.Bootstrapper.IPipelines,Nancy.Responses.Negotiation.IResponseNegotiator)">
+            <summary>
+            Enable the error handler on the specified pipeline
+            </summary>
+            <param name="pipelines"></param>
+            <param name="responseNegotiator"></param>
+        </member>
+        <member name="T:Thuria.Zitidar.Nancy.ThuriaHttpServiceErrorDefinition">
+            <summary>
+            Thuria Http Service Error Definition
+            </summary>
+        </member>
+        <member name="M:Thuria.Zitidar.Nancy.ThuriaHttpServiceErrorDefinition.NotFoundError(System.Exception)">
+            <summary>
+            Not Found Error
+            </summary>
+            <param name="runtimeException">Runtime Exception</param>
+            <returns>A Thuria Http Service Error model</returns>
+        </member>
+        <member name="M:Thuria.Zitidar.Nancy.ThuriaHttpServiceErrorDefinition.BadRequestError(System.Exception)">
+            <summary>
+            Bad Request Error
+            </summary>
+            <param name="runtimeException">Runtime Exception</param>
+            <returns>A Thuria Http Service Error model</returns>
+        </member>
+        <member name="M:Thuria.Zitidar.Nancy.ThuriaHttpServiceErrorDefinition.GeneralError(System.Exception)">
+            <summary>
+            General Error
+            </summary>
+            <param name="runtimeException">Runtime Exception</param>
+            <returns>A Thuria Http Service Error model</returns>
+        </member>
+        <member name="M:Thuria.Zitidar.Nancy.ThuriaHttpServiceErrorDefinition.InternalServerError(System.Exception)">
+            <summary>
+            Internal Server Error
+            </summary>
+            <param name="runtimeException">Runtime Exception</param>
+            <returns>A Thuria Http Service Error model</returns>
+        </member>
+        <member name="M:Thuria.Zitidar.Nancy.ThuriaHttpServiceErrorDefinition.InvalidTokenError(System.Exception)">
+            <summary>
+            Bad Request Error
+            </summary>
+            <param name="runtimeException">Runtime Exception</param>
+            <returns>A Thuria Http Service Error model</returns>
+        </member>
+        <member name="T:Thuria.Zitidar.Nancy.ThuriaHttpServiceErrorUtilities">
+            <summary>
+            Thuria Http Service Error utilities
+            </summary>
+        </member>
+        <member name="M:Thuria.Zitidar.Nancy.ThuriaHttpServiceErrorUtilities.ExtractFromException(System.Exception,Thuria.Zitidar.Nancy.ThuriaHttpServiceError)">
+            <summary>
+            Extract From Exception
+            </summary>
+            <param name="exception">Exception</param>
+            <param name="defaultValue">Default Value</param>
+            <returns>Thuria Http Service Error</returns>
+        </member>
+        <member name="T:Thuria.Zitidar.Nancy.ThuriaStatusCodeBaseHandler">
+            <summary>
+            Thuria Status Code Base Handler
+            </summary>
+        </member>
+        <member name="M:Thuria.Zitidar.Nancy.ThuriaStatusCodeBaseHandler.#ctor(Nancy.Responses.Negotiation.IResponseNegotiator)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="responseNegotiator">Response Negotiator</param>
+        </member>
+        <member name="M:Thuria.Zitidar.Nancy.ThuriaStatusCodeBaseHandler.HandlesStatusCode(Nancy.HttpStatusCode,Nancy.NancyContext)">
+            <summary>
+            Determines if the Status Code is handled by the Status Code Handler
+            </summary>
+            <param name="statusCode">Http Status Code</param>
+            <param name="context">Nancy Context</param>
+            <returns>A bool indicating if the Http Status Code is handled by the Status Code Handler</returns>
+        </member>
+        <member name="M:Thuria.Zitidar.Nancy.ThuriaStatusCodeBaseHandler.Handle(Nancy.HttpStatusCode,Nancy.NancyContext)">
+            <summary>
+            Handle Implementation
+            </summary>
+            <param name="statusCode">Http Status Code</param>
+            <param name="context">Nancy Context</param>
+        </member>
+        <member name="M:Thuria.Zitidar.Nancy.ThuriaStatusCodeBaseHandler.RetrieveServiceErrorException(Nancy.NancyContext)">
+            <summary>
+            Retrieve Service Error Exception from the Nancy Context
+            </summary>
+            <param name="nancyContext">Nancy Context</param>
+            <returns>The Exception in the Nancy Context</returns>
+        </member>
+        <member name="M:Thuria.Zitidar.Nancy.ThuriaStatusCodeBaseHandler.SetContextResponse(Nancy.NancyContext,Nancy.HttpStatusCode,Thuria.Zitidar.Nancy.ThuriaServiceErrorModel)">
+            <summary>
+            Set Nancy Context Response
+            </summary>
+            <param name="nancyContext">Nancy Context</param>
+            <param name="statusCode">Http Status Code</param>
+            <param name="serviceError">Thuria Service Error Model</param>
+        </member>
+        <member name="T:Thuria.Zitidar.Nancy.BadRequestServiceErrorException">
+            <summary>
+            Bad Request Service Error exception
+            </summary>
+        </member>
+        <member name="M:Thuria.Zitidar.Nancy.BadRequestServiceErrorException.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Thuria.Zitidar.Nancy.BadRequestServiceErrorException.#ctor(System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="message">Exception Message</param>
+        </member>
+        <member name="M:Thuria.Zitidar.Nancy.BadRequestServiceErrorException.#ctor(System.String,System.Exception)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="message">Exception Message</param>
+            <param name="innerException">Inner Exception</param>
+        </member>
+        <member name="P:Thuria.Zitidar.Nancy.BadRequestServiceErrorException.HttpServiceError">
+            <summary>
+            Thuria Http Service Error
+            </summary>
+        </member>
+        <member name="T:Thuria.Zitidar.Nancy.GeneralServiceErrorException">
+            <summary>
+            General Service Error exception
+            </summary>
+        </member>
+        <member name="M:Thuria.Zitidar.Nancy.GeneralServiceErrorException.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Thuria.Zitidar.Nancy.GeneralServiceErrorException.#ctor(System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="message">Exception Message</param>
+        </member>
+        <member name="M:Thuria.Zitidar.Nancy.GeneralServiceErrorException.#ctor(System.String,System.Exception)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="message">Exception Message</param>
+            <param name="innerException">Inner Exception</param>
+        </member>
+        <member name="P:Thuria.Zitidar.Nancy.GeneralServiceErrorException.HttpServiceError">
+            <summary>
+            Thuria Http Service Error
+            </summary>
+        </member>
+        <member name="T:Thuria.Zitidar.Nancy.InternalServerErrorException">
+            <summary>
+            Internal Server Error Exception
+            </summary>
+        </member>
+        <member name="M:Thuria.Zitidar.Nancy.InternalServerErrorException.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Thuria.Zitidar.Nancy.InternalServerErrorException.#ctor(System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="message">Exception Message</param>
+        </member>
+        <member name="M:Thuria.Zitidar.Nancy.InternalServerErrorException.#ctor(System.String,System.Exception)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="message">Exception Message</param>
+            <param name="innerException">Inner Exception</param>
+        </member>
+        <member name="P:Thuria.Zitidar.Nancy.InternalServerErrorException.HttpServiceError">
+            <summary>
+            Thuria Http Service Error
+            </summary>
+        </member>
         <member name="T:Thuria.Zitidar.Nancy.NancyBootstrapper">
             <summary>
             Nancy Bootstrapper

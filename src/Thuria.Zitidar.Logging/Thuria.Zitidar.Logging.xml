@@ -22,5 +22,12 @@
             Strip Quotes in CSV Layout Renderer
             </summary>
         </member>
+        <member name="M:Thuria.Zitidar.Logging.StripQuotesInCSVLayoutRenderer.Transform(System.String)">
+            <summary>
+            Transform the text string
+            </summary>
+            <param name="text">Input String</param>
+            <returns>Transformed string</returns>
+        </member>
     </members>
 </doc>

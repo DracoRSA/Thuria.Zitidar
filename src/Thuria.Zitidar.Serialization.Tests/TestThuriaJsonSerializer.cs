@@ -13,7 +13,7 @@ namespace Thuria.Zitidar.Serialization.Tests
   public class TestThuriaJsonSerializer
   {
     private string _serializedJsonData =
-      "{\"$id\":\"1\",\"_name\":\"Thuria.Zitidar.Serialization.Tests.FakeSerializationClass, Thuria.Zitidar.Serialization.Tests\",\"id\":\"e4df5e95-c956-409c-b9f1-a0a5a8505303\",\"testName\":\"TestName\"}";
+      "{\"$id\":\"1\",\"_name\":\"Thuria.Zitidar.Serialization.Tests.FakeSerializationClass, Thuria.Zitidar.Serialization.Tests\",\"Id\":\"e4df5e95-c956-409c-b9f1-a0a5a8505303\",\"TestName\":\"TestName\"}";
 
     [Test]
     public void Constructor()
@@ -124,7 +124,7 @@ namespace Thuria.Zitidar.Serialization.Tests
       //---------------Set up test pack-------------------
       var fakeTestData = new FakeTestData
                            {
-                             ItemPrices = new decimal[] {1.0m, 1.0m, 1.0m}
+                             ItemPrices = new decimal[] {1.0m, 2.3m, 4.81m}
                            };
       var jsonSerializer = new ThuriaJsonSerializer(new ThuriaDefaultJsonSerializerSettings());
       //---------------Assert Precondition----------------
