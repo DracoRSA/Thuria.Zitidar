@@ -3,7 +3,7 @@
 namespace Thuria.Zitidar.Core
 {
   /// <summary>
-  /// Thuria Serializer Settings (Based on the <see cref="https://www.newtonsoft.com/json">Newtonsoft.JSON</see> serialization framework />
+  /// Thuria Serializer Settings (Based on the Newtonsoft.JSON serialization framework />
   /// </summary>
   public interface IThuriaSerializerSettings
   {
