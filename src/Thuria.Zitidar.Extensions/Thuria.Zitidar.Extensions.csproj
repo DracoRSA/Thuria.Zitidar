@@ -11,6 +11,7 @@
     <PackageLicenseUrl>https://github.com/DracoRSA/Thuria.Zitidar/blob/master/LICENSE</PackageLicenseUrl>
     <Version>0.0.14-beta</Version>
     <Description>Various extensions to just add functionality to types like DateTime, String, Type, etc</Description>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
