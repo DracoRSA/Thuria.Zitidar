@@ -1,6 +1,15 @@
 ﻿<SolutionConfiguration>
   <Settings>
     <AllowParallelTestExecution>True</AllowParallelTestExecution>
+    <MetricsExclusionList>
+      <Value>Thuria.Zitidar.Extensions.Tests\Thuria.Zitidar.Extensions.Tests.csproj</Value>
+      <Value>Thuria.Zitidar.Akka.Tests\Thuria.Zitidar.Akka.Tests.csproj</Value>
+      <Value>Thuria.Zitidar.Nancy.Tests\Thuria.Zitidar.Nancy.Tests.csproj</Value>
+      <Value>Thuria.Zitidar.Serialization.Nancy.Tests\Thuria.Zitidar.Serialization.Nancy.Tests.csproj</Value>
+      <Value>Thuria.Zitidar.Serialization.Tests\Thuria.Zitidar.Serialization.Tests.csproj</Value>
+      <Value>Thuria.Zitidar.Settings.Tests\Thuria.Zitidar.Settings.Tests.csproj</Value>
+      <Value>Thuria.Zitidar.Structuremap.Tests\Thuria.Zitidar.Structuremap.Tests.csproj</Value>
+    </MetricsExclusionList>
     <SolutionConfigured>True</SolutionConfigured>
   </Settings>
 </SolutionConfiguration>

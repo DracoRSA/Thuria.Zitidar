@@ -106,7 +106,6 @@ gulp.task('load-settings', function(done) {
     buildSettings = yaml.load('./.buildSettings.yml');
     buildSettings.nugetPackage = (argv.package === undefined) ? 'All' : argv.package;
 
-    console.log('Version       :', buildSettings.VERSION);
     console.log('Configuration :', buildSettings.CONFIGURATION);
     console.log('Build Dir     :', buildDir);
 
@@ -155,7 +154,7 @@ gulp.task('build', gulp.series('restore', (done) => {
    return gulp.src('src/**/*.sln', { read: false })
         .pipe(build({
             configuration: buildSettings.CONFIGURATION, 
-            version: buildSettings.VERSION
+            version: buildSettings.VERSION,
         }))
         .on('error', function(err) {
             console.log(clc.red.bold('Error during Build: ', err));
@@ -176,6 +175,7 @@ gulp.task('test', gulp.series('build', (done) => {
             verbosity: 'normal',
             noBuild: true,
             configuration: buildSettings.CONFIGURATION,
+            version: buildSettings.VERSION,
             resultsDirectory: path.join(buildDir, 'buildoutput/testResults')
         }))
         .on('error', function(err) {

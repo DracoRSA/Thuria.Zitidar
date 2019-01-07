@@ -1,5 +1,5 @@
-VERSION: 0.0.1
-CONFIGURATION: Debug
+VERSION: 0.1.0
+CONFIGURATION: Release
 NUGETPACKAGES:
   - Core:
     Name: Zitidar.Core
@@ -8,9 +8,9 @@ NUGETPACKAGES:
     IsBeta: true
   - Extensions:
     Name: Zitidar.Extensions
-    Version: 0.0.14
+    Version: 0.1.0
     Location: src/Thuria.Zitidar.Extensions
-    IsBeta: true
+    IsBeta: false
   - Structuremap:
     Name: Zitidar.Structuremap
     Version: 0.0.14
