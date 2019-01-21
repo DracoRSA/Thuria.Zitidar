@@ -33,13 +33,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Thuria.Zitidar.Nancy", "Thu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Thuria.Zitidar.Nancy.Tests", "Thuria.Zitidar.Nancy.Tests\Thuria.Zitidar.Nancy.Tests.csproj", "{21BB10B1-AA8B-4220-B03E-1D95B1BC802D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Thuria.Zitidar.Serialization", "Thuria.Zitidar.Serialization\Thuria.Zitidar.Serialization.csproj", "{C7AA793B-A751-492A-8F68-CB574CD9D48C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Thuria.Zitidar.Serialization", "Thuria.Zitidar.Serialization\Thuria.Zitidar.Serialization.csproj", "{C7AA793B-A751-492A-8F68-CB574CD9D48C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Thuria.Zitidar.Serialization.Nancy", "Thuria.Zitidar.Serialization.Nancy\Thuria.Zitidar.Serialization.Nancy.csproj", "{3B809707-DB0E-404E-ACE7-52F224ACDF6A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Thuria.Zitidar.Serialization.Nancy", "Thuria.Zitidar.Serialization.Nancy\Thuria.Zitidar.Serialization.Nancy.csproj", "{3B809707-DB0E-404E-ACE7-52F224ACDF6A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Thuria.Zitidar.Serialization.Tests", "Thuria.Zitidar.Serialization.Tests\Thuria.Zitidar.Serialization.Tests.csproj", "{862DC0AF-4F7F-46AA-B9E8-702BEB2E3F7A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Thuria.Zitidar.Serialization.Tests", "Thuria.Zitidar.Serialization.Tests\Thuria.Zitidar.Serialization.Tests.csproj", "{862DC0AF-4F7F-46AA-B9E8-702BEB2E3F7A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Thuria.Zitidar.Serialization.Nancy.Tests", "Thuria.Zitidar.Serialization.Nancy.Tests\Thuria.Zitidar.Serialization.Nancy.Tests.csproj", "{896B34AC-D383-4001-8276-6D70EFB6EAEE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Thuria.Zitidar.Serialization.Nancy.Tests", "Thuria.Zitidar.Serialization.Nancy.Tests\Thuria.Zitidar.Serialization.Nancy.Tests.csproj", "{896B34AC-D383-4001-8276-6D70EFB6EAEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Thuria.Zitidar.Lamar", "Thuria.Zitidar.Lamar\Thuria.Zitidar.Lamar.csproj", "{9565D59A-4D82-46C5-8662-EB362474373D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Thuria.Zitidar.Lamar.Tests", "Thuria.Zitidar.Lamar.Tests\Thuria.Zitidar.Lamar.Tests.csproj", "{03418D12-A154-4B3C-85F9-CE51346572FF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -111,6 +115,14 @@ Global
 		{896B34AC-D383-4001-8276-6D70EFB6EAEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{896B34AC-D383-4001-8276-6D70EFB6EAEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{896B34AC-D383-4001-8276-6D70EFB6EAEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9565D59A-4D82-46C5-8662-EB362474373D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9565D59A-4D82-46C5-8662-EB362474373D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9565D59A-4D82-46C5-8662-EB362474373D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9565D59A-4D82-46C5-8662-EB362474373D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03418D12-A154-4B3C-85F9-CE51346572FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03418D12-A154-4B3C-85F9-CE51346572FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03418D12-A154-4B3C-85F9-CE51346572FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03418D12-A154-4B3C-85F9-CE51346572FF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

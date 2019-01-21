@@ -3,14 +3,19 @@ CONFIGURATION: Release
 NUGETPACKAGES:
   - Core:
     Name: Zitidar.Core
-    Version: 0.0.17
+    Version: 0.1.0
     Location: src/Thuria.Zitidar.Core
-    IsBeta: true
+    IsBeta: false
   - Extensions:
     Name: Zitidar.Extensions
     Version: 0.1.0
     Location: src/Thuria.Zitidar.Extensions
     IsBeta: false
+  - Lamar:
+    Name: Zitidar.Lamar
+    Version: 0.0.1
+    Location: src/Thuria.Zitidar.Lamar
+    IsBeta: true
   - Structuremap:
     Name: Zitidar.Structuremap
     Version: 0.0.14
@@ -18,9 +23,9 @@ NUGETPACKAGES:
     IsBeta: true
   - Settings:
     Name: Zitidar.Settings
-    Version: 0.0.5
+    Version: 0.1.0
     Location: src/Thuria.Zitidar.Settings
-    IsBeta: true
+    IsBeta: false
   - Akka:
     Name: Zitidar.Akka
     Version: 0.0.14
@@ -38,11 +43,11 @@ NUGETPACKAGES:
     IsBeta: true
   - Serialization:
     Name: Zitidar.Serialization
-    Version: 0.0.2
+    Version: 0.1.0
     Location: src/Thuria.Zitidar.Serialization
-    IsBeta: true
+    IsBeta: false
   - NancySerialization:
     Name: Zitidar.Serialization.Nancy
-    Version: 0.0.2
+    Version: 0.1.0
     Location: src/Thuria.Zitidar.Serialization.Nancy
-    IsBeta: true
+    IsBeta: false

@@ -9,6 +9,7 @@
       <Value>Thuria.Zitidar.Serialization.Tests\Thuria.Zitidar.Serialization.Tests.csproj</Value>
       <Value>Thuria.Zitidar.Settings.Tests\Thuria.Zitidar.Settings.Tests.csproj</Value>
       <Value>Thuria.Zitidar.Structuremap.Tests\Thuria.Zitidar.Structuremap.Tests.csproj</Value>
+      <Value>Thuria.Zitidar.Lamar.Tests\Thuria.Zitidar.Lamar.Tests.csproj</Value>
     </MetricsExclusionList>
     <SolutionConfigured>True</SolutionConfigured>
   </Settings>

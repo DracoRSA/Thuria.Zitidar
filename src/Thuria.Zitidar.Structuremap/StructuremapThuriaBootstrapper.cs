@@ -24,7 +24,7 @@ namespace Thuria.Zitidar.Structuremap
 
     public IContainer Container { get; protected set; }
 
-    public IStructuremapThuriaBootstrapper WithScannningOfFiles(bool isEnabled)
+    public IStructuremapThuriaBootstrapper WithScanningOfFiles(bool isEnabled)
     {
       _scanFiles = isEnabled;
       return this;

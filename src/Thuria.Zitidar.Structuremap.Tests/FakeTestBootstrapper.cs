@@ -2,7 +2,7 @@
 {
   public class FakeTestBootstrapper : StructuremapThuriaBootstrapper
   {
-    public bool IsScanningFiles => this._scanFiles;
+    public bool IsScanningFiles => _scanFiles;
 
     public new static IStructuremapThuriaBootstrapper Create()
     {

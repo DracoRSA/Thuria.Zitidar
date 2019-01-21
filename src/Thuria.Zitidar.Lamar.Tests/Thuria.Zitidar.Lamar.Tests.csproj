@@ -7,16 +7,19 @@
 
   <ItemGroup>
     <PackageReference Include="FluentAssertions" Version="5.5.3" />
-    <PackageReference Include="Microsoft.CSharp" Version="4.5.0" />
+    <PackageReference Include="Lamar" Version="2.0.4" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.9.0" />
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+    <PackageReference Include="Moq" Version="4.10.1" />
+    <PackageReference Include="NSubstitute" Version="3.1.0" />
     <PackageReference Include="NUnit" Version="3.11.0" />
     <PackageReference Include="NUnit3TestAdapter" Version="3.12.0" />
     <PackageReference Include="Thuria.Calot.TestUtilities" Version="0.0.10-beta" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Thuria.Zitidar.Serialization\Thuria.Zitidar.Serialization.csproj" />
+    <ProjectReference Include="..\Thuria.Zitidar.Core\Thuria.Zitidar.Core.csproj" />
+    <ProjectReference Include="..\Thuria.Zitidar.Extensions\Thuria.Zitidar.Extensions.csproj" />
+    <ProjectReference Include="..\Thuria.Zitidar.Lamar\Thuria.Zitidar.Lamar.csproj" />
   </ItemGroup>
 
 </Project>

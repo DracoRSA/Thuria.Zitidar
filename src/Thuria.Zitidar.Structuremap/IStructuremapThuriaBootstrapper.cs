@@ -8,7 +8,7 @@ namespace Thuria.Zitidar.Structuremap
   {
     IContainer Container { get; }
 
-    IStructuremapThuriaBootstrapper WithScannningOfFiles(bool isEnabled);
+    IStructuremapThuriaBootstrapper WithScanningOfFiles(bool isEnabled);
     IStructuremapThuriaBootstrapper WithRegistry(Registry iocRegistry);
     IStructuremapThuriaBootstrapper WithObjectMapping(Type pluginType, Type concreteType);
     IStructuremapThuriaBootstrapper WithConcreteObjectMapping(Type pluginType, object concreteObject);
