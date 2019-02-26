@@ -43,12 +43,15 @@ namespace Thuria.Zitidar.Akka.Service
     public abstract string Name { get; }
 
     /// <inheritdoc />
+    public string ConfigurationFileLocation { get; set; } = "akka.config";
+
+    /// <inheritdoc />
     public ActorSystem ActorSystem { get; set; }
 
     /// <inheritdoc />
     public virtual void Start()
     {
-      var akkaConfiguration = ThuriaHoconLoader.FromFile("akka.config");
+      var akkaConfiguration = ThuriaHoconLoader.FromFile(ConfigurationFileLocation);
       ActorSystem           = ActorSystem.Create(Name, akkaConfiguration);
 
       // ReSharper disable once ObjectCreationAsStatement

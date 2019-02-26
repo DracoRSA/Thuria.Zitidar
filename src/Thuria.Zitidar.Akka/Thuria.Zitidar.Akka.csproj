@@ -11,7 +11,7 @@
     <PackageTags>Thuria Akka</PackageTags>
     <Description>Base Akka.Net interfaces and implementations for the Thuria Framework
 A set of functions and features to assist with creating an Actor System using [Akka.Net](http://getakka.net)</Description>
-    <Version>0.0.14-beta</Version>
+    <Version>0.0.15-beta</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

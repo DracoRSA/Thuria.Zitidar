@@ -10,6 +10,11 @@ namespace Thuria.Zitidar.Akka
   public interface IThuriaActorSystem : IThuriaStartable, IThuriaStoppable, IThuriaNamedInstance, IDisposable
   {
     /// <summary>
+    /// Configuration File Location 
+    /// </summary>
+    string ConfigurationFileLocation { get; set; }
+
+    /// <summary>
     /// Actor System
     /// </summary>
     ActorSystem ActorSystem { get; set; }
