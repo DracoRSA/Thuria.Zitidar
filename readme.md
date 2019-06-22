@@ -1,3 +1,5 @@
+[![Build Status](https://dracorsa.visualstudio.com/Thuria%20-%20Zitidar/_apis/build/status/DracoRSA.Thuria.Zitidar?branchName=master)](https://dracorsa.visualstudio.com/Thuria%20-%20Zitidar/_build/latest?definitionId=2&branchName=master)
+
 Thuria - Zitidar
 ===
 
