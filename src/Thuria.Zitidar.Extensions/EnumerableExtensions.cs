@@ -48,7 +48,11 @@ namespace Thuria.Zitidar.Extensions
 
       foreach (var currentObject in inputCollection)
       {
-        allStrings.Append(Environment.NewLine);
+        if (allStrings.Length > 0)
+        {
+          allStrings.Append(Environment.NewLine);
+        }
+
         allStrings.Append(currentObject);
       }
       return allStrings.ToString();

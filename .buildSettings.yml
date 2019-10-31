@@ -1,16 +1,26 @@
-VERSION: 0.1.0
+VERSION: 0.2.0
 CONFIGURATION: Release
 NUGETPACKAGES:
   - Core:
     Name: Zitidar.Core
-    Version: 0.1.0
+    Version: 1.0.0
     Location: src/Thuria.Zitidar.Core
     IsBeta: false
+    Frameworks:
+      - net461
+      - net472
+      - netstandard2.0
+      - netcoreapp3.0
   - Extensions:
     Name: Zitidar.Extensions
-    Version: 0.1.0
+    Version: 1.0.0
     Location: src/Thuria.Zitidar.Extensions
     IsBeta: false
+    Frameworks:
+      - net461
+      - net472
+      - netstandard2.0
+      - netcoreapp3.0
   - Lamar:
     Name: Zitidar.Lamar
     Version: 0.0.1

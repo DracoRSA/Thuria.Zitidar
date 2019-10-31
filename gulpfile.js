@@ -66,13 +66,23 @@ let packNugetPackage = async (currentNugetPackage) => {
 
     let packageLocation = currentNugetPackage.Location + '/Thuria.' + currentNugetPackage.Name + '.csproj';
     let packageVersion = currentNugetPackage.Version + (currentNugetPackage.IsBeta ? '-beta' : '');
+    let packageRuntime = 'netstandard2.0';
+
+    if (currentNugetPackage.Frameworks !== undefined) {
+        currentNugetPackage.Frameworks.forEach(function (currentFramework) {
+            if (currentFramework !== 'netstandard2.0') {
+                packageRuntime = packageRuntime + ';' + currentFramework;
+            }
+        });
+    }
+
     let packConfiguration = {
         configuration: buildSettings.CONFIGURATION,
         version: packageVersion,
         noBuild: true,
         includeSymbols: false,
         output: path.join(buildDir, '/buildoutput/nuget'),
-        runtime: 'netstandard2.0'
+        runtime: packageRuntime
     };
 
     return new Promise((resolve, reject) => {
@@ -245,12 +255,13 @@ gulp.task('nuget-update-versions', gulp.series('load-settings', (done) => {
 }));
 
 // Create NuGet package from existinbg project(s)
-gulp.task('nuget-pack', gulp.series('load-settings', 'test', 'nuget-update-versions', (done) => {
+gulp.task('nuget-pack', gulp.series('load-settings', 'nuget-update-versions', (done) => {
     let allPromises = [];
     buildSettings.NUGETPACKAGES.forEach(function(currentPackage) {
         if (buildSettings.nugetPackage !== 'All' && currentPackage.Name !== buildSettings.nugetPackage) {
             return;
         }
+
         allPromises.push(packNugetPackage(currentPackage));
     });
 
