@@ -315,3 +315,5 @@ OpenCover/
 ASALocalRun/
 
 !buildoutput/nugetPublished/*.nupkg
+
+*.orig
