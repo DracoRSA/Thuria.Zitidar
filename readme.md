@@ -53,6 +53,10 @@ The following extensions are part of the package:
 3. DoesPropertyExist - Determine if a property exists on a given object
 4. GetDefaultData - Retrieve the default data for a given Type
 
+* **Data Reader (IDataReader)**
+1. GetValue - Get a column value from the Data Reader
+2. GetValue\<T> - - Get a column value from the Data Reader of Type \<T>
+
 ---
 Structuremap
 ---

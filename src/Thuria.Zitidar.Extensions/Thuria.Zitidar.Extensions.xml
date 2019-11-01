@@ -4,6 +4,32 @@
         <name>Thuria.Zitidar.Extensions</name>
     </assembly>
     <members>
+        <member name="T:Thuria.Zitidar.Extensions.DataReaderExtensions">
+            <summary>
+            IDataReader Extension methods
+            </summary>
+        </member>
+        <member name="M:Thuria.Zitidar.Extensions.DataReaderExtensions.GetValue(System.Data.IDataReader,System.String,System.Boolean,System.Object)">
+            <summary>
+            Retrieve the value from a Data Reader
+            </summary>
+            <param name="dataReader">Data Reader</param>
+            <param name="columnName">Column Name</param>
+            <param name="isMandatory">Mandatory indicator</param>
+            <param name="defaultValue">Default Value</param>
+            <returns>Either the default value or the current record's column value</returns>
+        </member>
+        <member name="M:Thuria.Zitidar.Extensions.DataReaderExtensions.GetValue``1(System.Data.IDataReader,System.String,System.Boolean,``0)">
+            <summary>
+            Retrieve the value from a Data Reader
+            </summary>
+            <typeparam name="T">Value Type</typeparam>
+            <param name="dataReader">Data Reader</param>
+            <param name="columnName">Column Name</param>
+            <param name="isMandatory">Mandatory indicator</param>
+            <param name="defaultValue">Default Value</param>
+            <returns>Either the default value or the current record's column value</returns>
+        </member>
         <member name="T:Thuria.Zitidar.Extensions.DateExtensions">
             <summary>
             Date and DateTime Extensions
