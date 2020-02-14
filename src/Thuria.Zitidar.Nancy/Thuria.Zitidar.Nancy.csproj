@@ -15,7 +15,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>D:\Draco\Thuria.Zitidar\src\Thuria.Zitidar.Nancy\Thuria.Zitidar.Nancy.xml</DocumentationFile>
+    <DocumentationFile>Thuria.Zitidar.Nancy.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

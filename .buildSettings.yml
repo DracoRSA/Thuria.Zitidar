@@ -21,6 +21,16 @@ NUGETPACKAGES:
       - net472
       - netstandard2.0
       - netcoreapp3.0
+  - Caching:
+    Name: Zitidar.Caching
+    Version: 0.0.1
+    Location: src/Thuria.Zitidar.Caching
+    IsBeta: true
+    Frameworks:
+      - net461
+      - net472
+      - netstandard2.0
+      - netcoreapp3.0
   - Lamar:
     Name: Zitidar.Lamar
     Version: 0.0.1

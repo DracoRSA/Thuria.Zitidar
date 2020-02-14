@@ -15,7 +15,7 @@ A set of functions and features to assist with creating an Actor System using [A
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>D:\Draco\Thuria.Zitidar\src\Thuria.Zitidar.Akka\Thuria.Zitidar.Akka.xml</DocumentationFile>
+    <DocumentationFile>Thuria.Zitidar.Akka.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

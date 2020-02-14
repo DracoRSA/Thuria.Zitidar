@@ -1,25 +1,29 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;netstandard2.1;netcoreapp3.0;net461</TargetFrameworks>
-    <PackageTags>Thuria Extensions</PackageTags>
+    <PackageTags>Thuria Caching</PackageTags>
     <Authors>Johan Dercksen</Authors>
     <Company>Draco</Company>
     <Product>Thuria</Product>
     <PackageProjectUrl>https://github.com/DracoRSA/Thuria.Zitidar</PackageProjectUrl>
     <RepositoryUrl>https://github.com/DracoRSA/Thuria.Zitidar</RepositoryUrl>
     <PackageLicenseUrl>https://github.com/DracoRSA/Thuria.Zitidar/blob/master/LICENSE</PackageLicenseUrl>
-    <Version>1.1.0</Version>
-    <Description>Various extensions to just add functionality to types like DateTime, String, Type, etc</Description>
+    <Version>1.0.0</Version>
+    <Description>Various Caching functions and utilities</Description>
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>Thuria.Zitidar.Extensions.xml</DocumentationFile>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
+    <DocumentationFile>Thuria.Zitidar.Caching.xml</DocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
-    <DocumentationFile>Thuria.Zitidar.Extensions.xml</DocumentationFile>
+    <DocumentationFile>Thuria.Zitidar.Caching.xml</DocumentationFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Thuria.Zitidar.Core\Thuria.Zitidar.Core.csproj" />
+  </ItemGroup>
 
 </Project>

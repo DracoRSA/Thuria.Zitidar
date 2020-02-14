@@ -29,6 +29,11 @@
             Thuria Actor System
             </summary>
         </member>
+        <member name="P:Thuria.Zitidar.Akka.IThuriaActorSystem.ConfigurationFileLocation">
+            <summary>
+            Configuration File Location 
+            </summary>
+        </member>
         <member name="P:Thuria.Zitidar.Akka.IThuriaActorSystem.ActorSystem">
             <summary>
             Actor System
@@ -108,6 +113,9 @@
             </summary>
         </member>
         <member name="P:Thuria.Zitidar.Akka.Service.ThuriaActorSystemBase.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Thuria.Zitidar.Akka.Service.ThuriaActorSystemBase.ConfigurationFileLocation">
             <inheritdoc />
         </member>
         <member name="P:Thuria.Zitidar.Akka.Service.ThuriaActorSystemBase.ActorSystem">

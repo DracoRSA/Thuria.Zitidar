@@ -15,11 +15,11 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>D:\Draco\Thuria.Zitidar\src\Thuria.Zitidar.Core\Thuria.Zitidar.Core.xml</DocumentationFile>
+    <DocumentationFile>Thuria.Zitidar.Core.xml</DocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
-    <DocumentationFile>D:\projects\Thuria.Zitidar\src\Thuria.Zitidar.Core\Thuria.Zitidar.Core.xml</DocumentationFile>
+    <DocumentationFile>Thuria.Zitidar.Core.xml</DocumentationFile>
   </PropertyGroup>
 
 </Project>
