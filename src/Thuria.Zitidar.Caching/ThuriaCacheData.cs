@@ -1,21 +1,23 @@
 ﻿using System;
 
+using Thuria.Zitidar.Core.Cache;
+
 namespace Thuria.Zitidar.Caching
 {
   /// <summary>
   /// Thuria Cache Data
   /// </summary>
-  public class ThuriaCacheData<T>
+  public class ThuriaCacheData<T> : IThuriaCacheData<T>
   {
     /// <summary>
     /// Thuria Cache Data Model
     /// </summary>
-    /// <param name="expiry">Data Expiry</param>
-    /// <param name="value">Data</param>
-    public ThuriaCacheData(DateTime expiry, T value)
+    /// <param name="expiryDate">Data Expiry</param>
+    /// <param name="cacheValue">Data</param>
+    public ThuriaCacheData(DateTime expiryDate, T cacheValue)
     {
-      Expiry = expiry;
-      Value  = value;
+      Expiry = expiryDate;
+      Value  = cacheValue ?? throw new ArgumentNullException(nameof(cacheValue));
     }
 
     /// <summary>

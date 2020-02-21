@@ -4,6 +4,62 @@
         <name>Thuria.Zitidar.Core</name>
     </assembly>
     <members>
+        <member name="T:Thuria.Zitidar.Core.Cache.IThuriaCache`1">
+            <summary>
+            Thuria Cache
+            </summary>
+        </member>
+        <member name="P:Thuria.Zitidar.Core.Cache.IThuriaCache`1.ExpiryInSeconds">
+            <summary>
+            Cache Expiry in Seconds
+            </summary>
+        </member>
+        <member name="M:Thuria.Zitidar.Core.Cache.IThuriaCache`1.ExistsAsync(System.String)">
+            <summary>
+            Determine if the Key exists in the Cache (Async)
+            </summary>
+            <param name="cacheKey">Cache Data Key</param>
+            <returns>
+            A boolean indicating whether the data item exists and not expired
+            </returns>
+        </member>
+        <member name="M:Thuria.Zitidar.Core.Cache.IThuriaCache`1.Upsert(System.String,`0)">
+            <summary>
+            Insert / Update the Cache Data Item (Async)
+            </summary>
+            <typeparam name="T">Data Type</typeparam>
+            <param name="cacheKey">Cache Key</param>
+            <param name="cacheValue">Cache Value</param>
+            <returns>
+            A boolean indicating if the Upsert was successful
+            </returns>
+        </member>
+        <member name="M:Thuria.Zitidar.Core.Cache.IThuriaCache`1.GetAsync(System.String)">
+            <summary>
+            Get Cache Value (Async)
+            </summary>
+            <param name="cacheKey">Cache Key</param>
+            <returns>
+            Null if item not found
+            Cache Value if Cache Value found
+            </returns>
+        </member>
+        <member name="T:Thuria.Zitidar.Core.Cache.IThuriaCacheData`1">
+            <summary>
+            Thuria Cache Data
+            </summary>
+            <typeparam name="T">Cache Value Data Type</typeparam>
+        </member>
+        <member name="P:Thuria.Zitidar.Core.Cache.IThuriaCacheData`1.Expiry">
+            <summary>
+            Data Expiry Date
+            </summary>
+        </member>
+        <member name="P:Thuria.Zitidar.Core.Cache.IThuriaCacheData`1.Value">
+            <summary>
+            Data Value
+            </summary>
+        </member>
         <member name="T:Thuria.Zitidar.Core.LogSeverity">
             <summary>
             Logger Severity Enumerations

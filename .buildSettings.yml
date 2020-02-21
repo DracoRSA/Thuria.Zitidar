@@ -3,7 +3,7 @@ CONFIGURATION: Release
 NUGETPACKAGES:
   - Core:
     Name: Zitidar.Core
-    Version: 1.0.0
+    Version: 1.1.0
     Location: src/Thuria.Zitidar.Core
     IsBeta: false
     Frameworks:
@@ -38,9 +38,14 @@ NUGETPACKAGES:
     IsBeta: true
   - Structuremap:
     Name: Zitidar.Structuremap
-    Version: 0.0.14
+    Version: 1.0.0
     Location: src/Thuria.Zitidar.Structuremap
     IsBeta: true
+    Frameworks:
+      - net461
+      - net472
+      - netstandard2.0
+      - netcoreapp3.0
   - Settings:
     Name: Zitidar.Settings
     Version: 0.1.0
