@@ -16,18 +16,28 @@ namespace Thuria.Zitidar.Caching.Tests
       //---------------Set up test pack-------------------
       //---------------Assert Precondition----------------
       //---------------Execute Test ----------------------
-      var cacheData = new ThuriaCacheData<string>(DateTime.UtcNow.AddSeconds(5), "Test");
+      var cacheData = new ThuriaCacheData<string>("Test", DateTime.UtcNow.AddSeconds(5));
       //---------------Test Result -----------------------
       cacheData.Should().NotBeNull();
     }
 
-    [TestCase("expiryValue")]
+    [TestCase("cacheValue")]
     public void Constructor_GivenNullParameter_ShouldThrowArgumentNullException(string parameterName)
     {
       //---------------Set up test pack-------------------
       //---------------Assert Precondition----------------
       //---------------Execute Test ----------------------
       ConstructorTestHelper.ValidateArgumentNullExceptionIfParameterIsNull<ThuriaCacheData<string>>(parameterName);
+      //---------------Test Result -----------------------
+    }
+
+    [TestCase("Expiry")]
+    public void Property_GivenValue_ShouldSetPropertyValue(string propertyName)
+    {
+      //---------------Set up test pack-------------------
+      //---------------Assert Precondition----------------
+      //---------------Execute Test ----------------------
+      PropertyTestHelper.ValidateGetAndSet<ThuriaCacheData<string>>(propertyName);
       //---------------Test Result -----------------------
     }
   }

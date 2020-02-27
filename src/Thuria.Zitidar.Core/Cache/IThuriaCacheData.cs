@@ -11,7 +11,7 @@ namespace Thuria.Zitidar.Core.Cache
     /// <summary>
     /// Data Expiry Date
     /// </summary>
-    DateTime Expiry { get; }
+    DateTime? Expiry { get; set;  }
 
     /// <summary>
     /// Data Value

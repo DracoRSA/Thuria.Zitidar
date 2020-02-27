@@ -6,7 +6,6 @@ namespace Thuria.Zitidar.Core.Cache
   /// Thuria Cache
   /// </summary>
   public interface IThuriaCache<T>
-    where T : IThuriaCacheData<T>
   {
     /// <summary>
     /// Cache Expiry in Seconds
@@ -28,10 +27,11 @@ namespace Thuria.Zitidar.Core.Cache
     /// <typeparam name="T">Data Type</typeparam>
     /// <param name="cacheKey">Cache Key</param>
     /// <param name="cacheValue">Cache Value</param>
+    /// <param name="setCacheExpiry">Set the Cache Expiry Value (Optional - Default true)</param>
     /// <returns>
     /// A boolean indicating if the Upsert was successful
     /// </returns>
-    Task<bool> Upsert(string cacheKey, T cacheValue);
+    Task<bool> UpsertAsync(string cacheKey, IThuriaCacheData<T> cacheValue, bool setCacheExpiry = true);
 
     /// <summary>
     /// Get Cache Value (Async)

@@ -58,6 +58,22 @@ The following extensions are part of the package:
 2. GetValue\<T> - - Get a column value from the Data Reader of Type \<T>
 
 ---
+Cache
+---
+
+The Cache package provides caching functionality with some basic cache expiry functionality.
+
+Example:
+
+> var thuriaCache = new ThuriaCache<string>(54000);   // 15 Minutes Expiry
+>
+> await thuriaCache.UpsertAsync("CacheKey", new ThuriaCacheData<string>("TestData"));
+> 
+> var cacheExists = await thuriaCache.ExistsAsync("CacheKey");
+>
+> var returnedData = await thuriaCache.GetAsync("CacheKey");
+
+---
 Structuremap
 ---
 

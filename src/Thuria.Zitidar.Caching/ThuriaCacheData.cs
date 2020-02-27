@@ -12,9 +12,9 @@ namespace Thuria.Zitidar.Caching
     /// <summary>
     /// Thuria Cache Data Model
     /// </summary>
-    /// <param name="expiryDate">Data Expiry</param>
     /// <param name="cacheValue">Data</param>
-    public ThuriaCacheData(DateTime expiryDate, T cacheValue)
+    /// <param name="expiryDate">Data Expiry</param>
+    public ThuriaCacheData(T cacheValue, DateTime? expiryDate = null)
     {
       Expiry = expiryDate;
       Value  = cacheValue ?? throw new ArgumentNullException(nameof(cacheValue));
@@ -23,7 +23,7 @@ namespace Thuria.Zitidar.Caching
     /// <summary>
     /// Data Expiry Date
     /// </summary>
-    public DateTime Expiry { get; private set; }
+    public DateTime? Expiry { get; set; }
 
     /// <summary>
     /// Data Value

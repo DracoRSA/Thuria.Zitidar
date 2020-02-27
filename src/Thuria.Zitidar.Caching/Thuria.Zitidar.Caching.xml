@@ -21,38 +21,23 @@
         <member name="M:Thuria.Zitidar.Caching.ThuriaCache`1.ExistsAsync(System.String)">
             <inheritdoc />
         </member>
-        <member name="M:Thuria.Zitidar.Caching.ThuriaCache`1.Upsert(System.String,`0)">
-            <summary>
-            Insert / Update the Cache Data Item
-            </summary>
-            <typeparam name="T">Data Type</typeparam>
-            <param name="cacheKey">Cache Key</param>
-            <param name="cacheValue">Cache Value</param>
-            <returns>
-            A boolean indicating if the Upsert was successful
-            </returns>
+        <member name="M:Thuria.Zitidar.Caching.ThuriaCache`1.UpsertAsync(System.String,Thuria.Zitidar.Core.Cache.IThuriaCacheData{`0},System.Boolean)">
+            <inheritdoc />
         </member>
         <member name="M:Thuria.Zitidar.Caching.ThuriaCache`1.GetAsync(System.String)">
-            <summary>
-            Get Cache Value (Async)
-            </summary>
-            <param name="cacheKey">Cache Key</param>
-            <returns>
-            Null if item not found
-            Cache Value if Cache Value found
-            </returns>
+            <inheritdoc />
         </member>
         <member name="T:Thuria.Zitidar.Caching.ThuriaCacheData`1">
             <summary>
             Thuria Cache Data
             </summary>
         </member>
-        <member name="M:Thuria.Zitidar.Caching.ThuriaCacheData`1.#ctor(System.DateTime,`0)">
+        <member name="M:Thuria.Zitidar.Caching.ThuriaCacheData`1.#ctor(`0,System.Nullable{System.DateTime})">
             <summary>
             Thuria Cache Data Model
             </summary>
-            <param name="expiryDate">Data Expiry</param>
             <param name="cacheValue">Data</param>
+            <param name="expiryDate">Data Expiry</param>
         </member>
         <member name="P:Thuria.Zitidar.Caching.ThuriaCacheData`1.Expiry">
             <summary>

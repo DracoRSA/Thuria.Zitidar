@@ -10,6 +10,18 @@
       <Value>Thuria.Zitidar.Settings.Tests\Thuria.Zitidar.Settings.Tests.csproj</Value>
       <Value>Thuria.Zitidar.Structuremap.Tests\Thuria.Zitidar.Structuremap.Tests.csproj</Value>
       <Value>Thuria.Zitidar.Lamar.Tests\Thuria.Zitidar.Lamar.Tests.csproj</Value>
+      <Value>Thuria.Zitidar.Caching\Thuria.Zitidar.Caching.csproj:net461</Value>
+      <Value>Thuria.Zitidar.Caching\Thuria.Zitidar.Caching.csproj:netstandard2.0</Value>
+      <Value>Thuria.Zitidar.Caching\Thuria.Zitidar.Caching.csproj:netstandard2.1</Value>
+      <Value>Thuria.Zitidar.Structuremap\Thuria.Zitidar.Structuremap.csproj:net461</Value>
+      <Value>Thuria.Zitidar.Structuremap\Thuria.Zitidar.Structuremap.csproj:net472</Value>
+      <Value>Thuria.Zitidar.Structuremap\Thuria.Zitidar.Structuremap.csproj:netstandard2.0</Value>
+      <Value>Thuria.Zitidar.Core\Thuria.Zitidar.Core.csproj:net461</Value>
+      <Value>Thuria.Zitidar.Core\Thuria.Zitidar.Core.csproj:net472</Value>
+      <Value>Thuria.Zitidar.Core\Thuria.Zitidar.Core.csproj:netstandard2.0</Value>
+      <Value>Thuria.Zitidar.Extensions\Thuria.Zitidar.Extensions.csproj:net461</Value>
+      <Value>Thuria.Zitidar.Extensions\Thuria.Zitidar.Extensions.csproj:netstandard2.0</Value>
+      <Value>Thuria.Zitidar.Extensions\Thuria.Zitidar.Extensions.csproj:netstandard2.1</Value>
     </MetricsExclusionList>
     <SolutionConfigured>True</SolutionConfigured>
   </Settings>

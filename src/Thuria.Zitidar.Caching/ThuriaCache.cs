@@ -10,9 +10,8 @@ namespace Thuria.Zitidar.Caching
   /// Thuria Type Cache
   /// </summary>
   public class ThuriaCache<T> : IThuriaCache<T>
-    where T : IThuriaCacheData<T>
   {
-    private readonly ConcurrentDictionary<string, T> _cacheData;
+    private readonly ConcurrentDictionary<string, IThuriaCacheData<T>> _cacheData;
 
     /// <summary>
     /// Thuria Type Cache constructor
@@ -26,7 +25,7 @@ namespace Thuria.Zitidar.Caching
       }
 
       ExpiryInSeconds = expiryInSeconds;
-      _cacheData      = new ConcurrentDictionary<string, T>();
+      _cacheData      = new ConcurrentDictionary<string, IThuriaCacheData<T>>();
     }
 
     /// <inheritdoc />
@@ -39,6 +38,8 @@ namespace Thuria.Zitidar.Caching
 
       try
       {
+        if (string.IsNullOrWhiteSpace(cacheKey)) { throw new ArgumentNullException(nameof(cacheKey)); }
+
         var doesCacheDataExist = false;
         if (_cacheData.ContainsKey(cacheKey))
         {
@@ -55,17 +56,16 @@ namespace Thuria.Zitidar.Caching
       return taskCompletionSource.Task;
     }
 
-    /// <summary>
-    /// Insert / Update the Cache Data Item
-    /// </summary>
-    /// <typeparam name="T">Data Type</typeparam>
-    /// <param name="cacheKey">Cache Key</param>
-    /// <param name="cacheValue">Cache Value</param>
-    /// <returns>
-    /// A boolean indicating if the Upsert was successful
-    /// </returns>
-    public async Task<bool> Upsert(string cacheKey, T cacheValue)
+    /// <inheritdoc />
+    public async Task<bool> UpsertAsync(string cacheKey, IThuriaCacheData<T> cacheValue, bool setCacheExpiry = true)
     {
+      if (cacheValue == null) { throw new ArgumentNullException(nameof(cacheValue)); }
+
+      if (setCacheExpiry)
+      {
+        cacheValue.Expiry = DateTime.UtcNow.AddSeconds(ExpiryInSeconds);
+      }
+
       if (await ExistsAsync(cacheKey))
       {
         _cacheData.AddOrUpdate(cacheKey, cacheValue, (key, oldValue) => cacheValue);
@@ -75,14 +75,7 @@ namespace Thuria.Zitidar.Caching
       return _cacheData.TryAdd(cacheKey, cacheValue);
     }
 
-    /// <summary>
-    /// Get Cache Value (Async)
-    /// </summary>
-    /// <param name="cacheKey">Cache Key</param>
-    /// <returns>
-    /// Null if item not found
-    /// Cache Value if Cache Value found
-    /// </returns>
+    /// <inheritdoc />
     public async Task<T> GetAsync(string cacheKey)
     {
       if (!await ExistsAsync(cacheKey))
@@ -91,7 +84,7 @@ namespace Thuria.Zitidar.Caching
       }
 
       _cacheData.TryGetValue(cacheKey, out var cacheValue);
-      return cacheValue;
+      return cacheValue == null ? default(T) : cacheValue.Value;
     }
   }
 }

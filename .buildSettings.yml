@@ -23,9 +23,9 @@ NUGETPACKAGES:
       - netcoreapp3.0
   - Caching:
     Name: Zitidar.Caching
-    Version: 0.0.1
+    Version: 1.0.0
     Location: src/Thuria.Zitidar.Caching
-    IsBeta: true
+    IsBeta: false
     Frameworks:
       - net461
       - net472
@@ -40,7 +40,7 @@ NUGETPACKAGES:
     Name: Zitidar.Structuremap
     Version: 1.0.0
     Location: src/Thuria.Zitidar.Structuremap
-    IsBeta: true
+    IsBeta: false
     Frameworks:
       - net461
       - net472
