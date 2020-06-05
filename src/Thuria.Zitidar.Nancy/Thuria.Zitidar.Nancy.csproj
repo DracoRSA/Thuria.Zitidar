@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;netcoreapp3.1;net461;net472;net48</TargetFrameworks>
-    <Version>0.0.6-beta</Version>
+    <Version>0.0.7-beta</Version>
     <Authors>Johan Dercksen</Authors>
     <Company>Draco</Company>
     <Product>Thuria</Product>
