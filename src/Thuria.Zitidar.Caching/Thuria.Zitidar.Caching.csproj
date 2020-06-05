@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;netstandard2.1;netcoreapp3.0;net461</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;netcoreapp3.0;net461;net472;net48</TargetFrameworks>
     <PackageTags>Thuria Caching</PackageTags>
     <Authors>Johan Dercksen</Authors>
     <Company>Draco</Company>
