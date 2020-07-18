@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Thuria.Zitidar.Akka.Service
 {
@@ -43,9 +45,45 @@ namespace Thuria.Zitidar.Akka.Service
     }
 
     /// <inheritdoc />
+    public virtual Task StartAsync(CancellationToken cancellationToken)
+    {
+      var taskCompletionSource = new TaskCompletionSource<bool>();
+
+      try
+      {
+        Start();
+        taskCompletionSource.SetResult(true);
+      }
+      catch (Exception runtimeException)
+      {
+        taskCompletionSource.SetException(runtimeException);
+      }
+
+      return taskCompletionSource.Task;
+    }
+
+    /// <inheritdoc />
     public virtual void Stop()
     {
       ActorSystem?.Stop();
+    }
+
+    /// <inheritdoc />
+    public virtual Task StopAsync(CancellationToken cancellationToken)
+    {
+      var taskCompletionSource = new TaskCompletionSource<bool>();
+
+      try
+      {
+        Stop();
+        taskCompletionSource.SetResult(true);
+      }
+      catch (Exception runtimeException)
+      {
+        taskCompletionSource.SetException(runtimeException);
+      }
+
+      return taskCompletionSource.Task;
     }
   }
 }

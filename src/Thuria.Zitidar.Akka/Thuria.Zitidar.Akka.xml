@@ -90,7 +90,13 @@
         <member name="M:Thuria.Zitidar.Akka.Service.ThuriaActorServiceBase.Start">
             <inheritdoc />
         </member>
+        <member name="M:Thuria.Zitidar.Akka.Service.ThuriaActorServiceBase.StartAsync(System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
         <member name="M:Thuria.Zitidar.Akka.Service.ThuriaActorServiceBase.Stop">
+            <inheritdoc />
+        </member>
+        <member name="M:Thuria.Zitidar.Akka.Service.ThuriaActorServiceBase.StopAsync(System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
         <member name="T:Thuria.Zitidar.Akka.Service.ThuriaActorSystemBase">
@@ -124,7 +130,13 @@
         <member name="M:Thuria.Zitidar.Akka.Service.ThuriaActorSystemBase.Start">
             <inheritdoc />
         </member>
+        <member name="M:Thuria.Zitidar.Akka.Service.ThuriaActorSystemBase.StartAsync(System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
         <member name="M:Thuria.Zitidar.Akka.Service.ThuriaActorSystemBase.Stop">
+            <inheritdoc />
+        </member>
+        <member name="M:Thuria.Zitidar.Akka.Service.ThuriaActorSystemBase.StopAsync(System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
         <member name="T:Thuria.Zitidar.Akka.Settings.ThuriaHoconLoader">

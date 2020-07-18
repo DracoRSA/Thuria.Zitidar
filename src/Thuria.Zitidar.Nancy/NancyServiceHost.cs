@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
-
+using System.Threading;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
 
 using Thuria.Zitidar.Core;
@@ -70,6 +71,24 @@ namespace Thuria.Zitidar.Nancy
     }
 
     /// <inheritdoc />
+    public Task StartAsync(CancellationToken cancellationToken)
+    {
+      var taskCompletionSource = new TaskCompletionSource<bool>();
+
+      try
+      {
+        Start();
+        taskCompletionSource.SetResult(true);
+      }
+      catch (Exception runtimeException)
+      {
+        taskCompletionSource.SetException(runtimeException);
+      }
+
+      return taskCompletionSource.Task;
+    }
+
+    /// <inheritdoc />
     public void Stop()
     {
       var stoppableServices = NancyStartup.IocContainer.GetAllInstances<IThuriaStoppable>();
@@ -84,6 +103,24 @@ namespace Thuria.Zitidar.Nancy
       _webHost.StopAsync().Wait();
       _webHost.Dispose();
       _webHost = null;
+    }
+
+    /// <inheritdoc />
+    public Task StopAsync(CancellationToken cancellationToken)
+    {
+      var taskCompletionSource = new TaskCompletionSource<bool>();
+
+      try
+      {
+        Stop();
+        taskCompletionSource.SetResult(true);
+      }
+      catch (Exception runtimeException)
+      {
+        taskCompletionSource.SetException(runtimeException);
+      }
+
+      return taskCompletionSource.Task;
     }
   }
 }

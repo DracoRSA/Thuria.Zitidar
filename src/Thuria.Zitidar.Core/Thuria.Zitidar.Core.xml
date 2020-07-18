@@ -210,6 +210,13 @@
             Start
             </summary>
         </member>
+        <member name="M:Thuria.Zitidar.Core.IThuriaStartable.StartAsync(System.Threading.CancellationToken)">
+            <summary>
+            Start the Service (Async)
+            </summary>
+            <param name="cancellationToken">Cancellation Token</param>
+            <returns>An awaitable task</returns>
+        </member>
         <member name="T:Thuria.Zitidar.Core.IThuriaStoppable">
             <summary>
             Thuria Stoppable object
@@ -219,6 +226,13 @@
             <summary>
             Stop
             </summary>
+        </member>
+        <member name="M:Thuria.Zitidar.Core.IThuriaStoppable.StopAsync(System.Threading.CancellationToken)">
+            <summary>
+            Start the Service (Async)
+            </summary>
+            <param name="cancellationToken">Cancellation Token</param>
+            <returns>An awaitable task</returns>
         </member>
         <member name="T:Thuria.Zitidar.Core.IThuriaLogger">
             <summary>

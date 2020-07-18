@@ -287,7 +287,13 @@
         <member name="M:Thuria.Zitidar.Nancy.NancyServiceHost.Start">
             <inheritdoc />
         </member>
+        <member name="M:Thuria.Zitidar.Nancy.NancyServiceHost.StartAsync(System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
         <member name="M:Thuria.Zitidar.Nancy.NancyServiceHost.Stop">
+            <inheritdoc />
+        </member>
+        <member name="M:Thuria.Zitidar.Nancy.NancyServiceHost.StopAsync(System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
         <member name="T:Thuria.Zitidar.Nancy.NancyStartup">

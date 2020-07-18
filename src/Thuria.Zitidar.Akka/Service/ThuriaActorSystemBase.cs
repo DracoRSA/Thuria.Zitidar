@@ -1,5 +1,6 @@
 ﻿using System;
-
+using System.Threading;
+using System.Threading.Tasks;
 using Akka.Actor;
 using StructureMap;
 using Akka.DI.StructureMap;
@@ -59,12 +60,49 @@ namespace Thuria.Zitidar.Akka.Service
     }
 
     /// <inheritdoc />
+    public Task StartAsync(CancellationToken cancellationToken)
+    {
+      var taskCompletionSource = new TaskCompletionSource<bool>();
+
+      try
+      {
+        Start();
+        taskCompletionSource.SetResult(true);
+      }
+      catch (Exception runtimeException)
+      {
+        taskCompletionSource.SetException(runtimeException);
+      }
+
+      return taskCompletionSource.Task;
+
+    }
+
+    /// <inheritdoc />
     public void Stop()
     {
       if (ActorSystem == null) { return; }
 
       ActorSystem.Terminate();
       ActorSystem = null;
+    }
+
+    /// <inheritdoc />
+    public Task StopAsync(CancellationToken cancellationToken)
+    {
+      var taskCompletionSource = new TaskCompletionSource<bool>();
+
+      try
+      {
+        Stop();
+        taskCompletionSource.SetResult(true);
+      }
+      catch (Exception runtimeException)
+      {
+        taskCompletionSource.SetException(runtimeException);
+      }
+
+      return taskCompletionSource.Task;
     }
   }
 }
