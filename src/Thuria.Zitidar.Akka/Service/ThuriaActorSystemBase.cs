@@ -88,7 +88,7 @@ namespace Thuria.Zitidar.Akka.Service
     }
 
     /// <inheritdoc />
-    public Task StopAsync(CancellationToken cancellationToken)
+    public Task StopAsync()
     {
       var taskCompletionSource = new TaskCompletionSource<bool>();
 

@@ -1,5 +1,4 @@
-﻿using System.Threading;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 
 namespace Thuria.Zitidar.Core
 {
@@ -16,8 +15,7 @@ namespace Thuria.Zitidar.Core
     /// <summary>
     /// Start the Service (Async)
     /// </summary>
-    /// <param name="cancellationToken">Cancellation Token</param>
     /// <returns>An awaitable task</returns>
-    Task StopAsync(CancellationToken cancellationToken);
+    Task StopAsync();
   }
 }

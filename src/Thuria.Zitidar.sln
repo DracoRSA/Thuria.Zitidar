@@ -30,25 +30,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Thuria.Zitidar.Settings.Tes
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Thuria.Zitidar.Logging", "Thuria.Zitidar.Logging\Thuria.Zitidar.Logging.csproj", "{177F0A8C-325A-410A-B6F5-4C0FB9823623}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Thuria.Zitidar.Nancy", "Thuria.Zitidar.Nancy\Thuria.Zitidar.Nancy.csproj", "{9D6AB4B3-F4F0-4573-912C-B59EBBD5F760}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Thuria.Zitidar.Nancy.Tests", "Thuria.Zitidar.Nancy.Tests\Thuria.Zitidar.Nancy.Tests.csproj", "{21BB10B1-AA8B-4220-B03E-1D95B1BC802D}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Thuria.Zitidar.Serialization", "Thuria.Zitidar.Serialization\Thuria.Zitidar.Serialization.csproj", "{C7AA793B-A751-492A-8F68-CB574CD9D48C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Thuria.Zitidar.Serialization.Nancy", "Thuria.Zitidar.Serialization.Nancy\Thuria.Zitidar.Serialization.Nancy.csproj", "{3B809707-DB0E-404E-ACE7-52F224ACDF6A}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Thuria.Zitidar.Serialization.Tests", "Thuria.Zitidar.Serialization.Tests\Thuria.Zitidar.Serialization.Tests.csproj", "{862DC0AF-4F7F-46AA-B9E8-702BEB2E3F7A}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Thuria.Zitidar.Serialization.Nancy.Tests", "Thuria.Zitidar.Serialization.Nancy.Tests\Thuria.Zitidar.Serialization.Nancy.Tests.csproj", "{896B34AC-D383-4001-8276-6D70EFB6EAEE}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Thuria.Zitidar.Lamar", "Thuria.Zitidar.Lamar\Thuria.Zitidar.Lamar.csproj", "{9565D59A-4D82-46C5-8662-EB362474373D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Thuria.Zitidar.Lamar.Tests", "Thuria.Zitidar.Lamar.Tests\Thuria.Zitidar.Lamar.Tests.csproj", "{03418D12-A154-4B3C-85F9-CE51346572FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Thuria.Zitidar.Caching", "Thuria.Zitidar.Caching\Thuria.Zitidar.Caching.csproj", "{DC6C3DCF-026A-49D3-8371-F2FF5C99A70E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Thuria.Zitidar.Caching", "Thuria.Zitidar.Caching\Thuria.Zitidar.Caching.csproj", "{DC6C3DCF-026A-49D3-8371-F2FF5C99A70E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Thuria.Zitidar.Caching.Tests", "Thuria.Zitidar.Caching.Tests\Thuria.Zitidar.Caching.Tests.csproj", "{D62D50C3-FF04-4C01-BD97-A5DF6B5B4C5C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Thuria.Zitidar.Caching.Tests", "Thuria.Zitidar.Caching.Tests\Thuria.Zitidar.Caching.Tests.csproj", "{D62D50C3-FF04-4C01-BD97-A5DF6B5B4C5C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -96,30 +88,14 @@ Global
 		{177F0A8C-325A-410A-B6F5-4C0FB9823623}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{177F0A8C-325A-410A-B6F5-4C0FB9823623}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{177F0A8C-325A-410A-B6F5-4C0FB9823623}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9D6AB4B3-F4F0-4573-912C-B59EBBD5F760}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9D6AB4B3-F4F0-4573-912C-B59EBBD5F760}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9D6AB4B3-F4F0-4573-912C-B59EBBD5F760}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9D6AB4B3-F4F0-4573-912C-B59EBBD5F760}.Release|Any CPU.Build.0 = Release|Any CPU
-		{21BB10B1-AA8B-4220-B03E-1D95B1BC802D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{21BB10B1-AA8B-4220-B03E-1D95B1BC802D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{21BB10B1-AA8B-4220-B03E-1D95B1BC802D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{21BB10B1-AA8B-4220-B03E-1D95B1BC802D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C7AA793B-A751-492A-8F68-CB574CD9D48C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C7AA793B-A751-492A-8F68-CB574CD9D48C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7AA793B-A751-492A-8F68-CB574CD9D48C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C7AA793B-A751-492A-8F68-CB574CD9D48C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3B809707-DB0E-404E-ACE7-52F224ACDF6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3B809707-DB0E-404E-ACE7-52F224ACDF6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3B809707-DB0E-404E-ACE7-52F224ACDF6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3B809707-DB0E-404E-ACE7-52F224ACDF6A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{862DC0AF-4F7F-46AA-B9E8-702BEB2E3F7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{862DC0AF-4F7F-46AA-B9E8-702BEB2E3F7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{862DC0AF-4F7F-46AA-B9E8-702BEB2E3F7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{862DC0AF-4F7F-46AA-B9E8-702BEB2E3F7A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{896B34AC-D383-4001-8276-6D70EFB6EAEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{896B34AC-D383-4001-8276-6D70EFB6EAEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{896B34AC-D383-4001-8276-6D70EFB6EAEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{896B34AC-D383-4001-8276-6D70EFB6EAEE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9565D59A-4D82-46C5-8662-EB362474373D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9565D59A-4D82-46C5-8662-EB362474373D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9565D59A-4D82-46C5-8662-EB362474373D}.Release|Any CPU.ActiveCfg = Release|Any CPU

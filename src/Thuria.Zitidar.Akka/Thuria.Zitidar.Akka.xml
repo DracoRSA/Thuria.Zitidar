@@ -96,7 +96,7 @@
         <member name="M:Thuria.Zitidar.Akka.Service.ThuriaActorServiceBase.Stop">
             <inheritdoc />
         </member>
-        <member name="M:Thuria.Zitidar.Akka.Service.ThuriaActorServiceBase.StopAsync(System.Threading.CancellationToken)">
+        <member name="M:Thuria.Zitidar.Akka.Service.ThuriaActorServiceBase.StopAsync">
             <inheritdoc />
         </member>
         <member name="T:Thuria.Zitidar.Akka.Service.ThuriaActorSystemBase">
@@ -136,7 +136,7 @@
         <member name="M:Thuria.Zitidar.Akka.Service.ThuriaActorSystemBase.Stop">
             <inheritdoc />
         </member>
-        <member name="M:Thuria.Zitidar.Akka.Service.ThuriaActorSystemBase.StopAsync(System.Threading.CancellationToken)">
+        <member name="M:Thuria.Zitidar.Akka.Service.ThuriaActorSystemBase.StopAsync">
             <inheritdoc />
         </member>
         <member name="T:Thuria.Zitidar.Akka.Settings.ThuriaHoconLoader">

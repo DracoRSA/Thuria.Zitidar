@@ -227,11 +227,10 @@
             Stop
             </summary>
         </member>
-        <member name="M:Thuria.Zitidar.Core.IThuriaStoppable.StopAsync(System.Threading.CancellationToken)">
+        <member name="M:Thuria.Zitidar.Core.IThuriaStoppable.StopAsync">
             <summary>
             Start the Service (Async)
             </summary>
-            <param name="cancellationToken">Cancellation Token</param>
             <returns>An awaitable task</returns>
         </member>
         <member name="T:Thuria.Zitidar.Core.IThuriaLogger">
