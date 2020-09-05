@@ -68,6 +68,17 @@ namespace Thuria.Zitidar.Extensions.Tests
       Assert.AreEqual(newTestValue, fakeReflection.ValidProperty);
     }
 
+    [TestCase("Id", "08c636fa-ccdb-40c9-9527-88d90cc399f5", true)]
+    public void SetPropertyValue_GivenPropertyValue_ShouldSetPropertyValue(string propertyName, object propertyValue, bool convertIfRequired)
+    {
+      //---------------Set up test pack-------------------
+      var fakeReflection = new FakeReflection();
+      //---------------Assert Precondition----------------
+      //---------------Execute Test ----------------------
+      Assert.DoesNotThrow(() => fakeReflection.SetPropertyValue(propertyName, propertyValue, convertIfRequired));
+      //---------------Test Result -----------------------
+    }
+
     [Test]
     public void DoesPropertyExist_GivenPropertyExists_ShouldReturnTrue()
     {

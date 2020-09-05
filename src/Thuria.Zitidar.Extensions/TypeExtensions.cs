@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection;
 using System.Collections.Generic;
 
 namespace Thuria.Zitidar.Extensions
@@ -9,16 +10,21 @@ namespace Thuria.Zitidar.Extensions
   public static class TypeExtensions
   {
     private static readonly Dictionary<Type, Func<object>> DefaultValueGenerators = new Dictionary<Type, Func<object>>
-      {
-        { typeof(Guid), () => Guid.Empty },
-        { typeof(DateTime), () => default(DateTime) },
-        { typeof(int), () => default(int) },
-        { typeof(uint), () => default(uint) },
-        { typeof(long), () => default(long) },
-        { typeof(decimal), () => default(decimal) },
-        { typeof(float), () => default(float) },
-        { typeof(bool), () => default(bool) },
-      };
+                                                                                      {
+                                                                                        {typeof(Guid), () => Guid.Empty},
+                                                                                        {typeof(DateTime), () => default(DateTime)},
+                                                                                        {typeof(int), () => default(int)},
+                                                                                        {typeof(uint), () => default(uint)},
+                                                                                        {typeof(long), () => default(long)},
+                                                                                        {typeof(decimal), () => default(decimal)},
+                                                                                        {typeof(float), () => default(float)},
+                                                                                        {typeof(bool), () => default(bool)},
+                                                                                      };
+
+    private static readonly Dictionary<Type, Func<object, object>> TypeConverters = new Dictionary<Type, Func<object, object>>
+                                                                        {
+                                                                          { typeof(Guid), inputValue => Guid.Parse(inputValue.ToString()) }
+                                                                        };
 
     /// <summary>
     /// Get Property Value
@@ -52,9 +58,17 @@ namespace Thuria.Zitidar.Extensions
         throw new ArgumentException($"Property [{propertyName}] does not exist on object [{currentObject.GetType().Name}]");
       }
 
-      var valueToSet = convertIfRequired && propertyValue.GetType() != propertyInfo.PropertyType
-                              ? Convert.ChangeType(propertyValue, propertyInfo.PropertyType)
-                              : propertyValue;
+      object valueToSet = null;
+      if (convertIfRequired && propertyValue.GetType() != propertyInfo.PropertyType)
+      {
+        valueToSet = TypeConverters.ContainsKey(propertyInfo.PropertyType) 
+                       ? TypeConverters[propertyInfo.PropertyType](propertyValue) 
+                       : Convert.ChangeType(propertyValue, propertyInfo.PropertyType);
+      }
+      else
+      {
+        valueToSet = propertyValue;
+      }
 
       propertyInfo.SetValue(currentObject, valueToSet);
     }

@@ -13,7 +13,7 @@ NUGETPACKAGES:
       - netcoreapp3.0
   - Extensions:
     Name: Zitidar.Extensions
-    Version: 1.2.0
+    Version: 1.3.0
     Location: src/Thuria.Zitidar.Extensions
     IsBeta: false
     Frameworks:
