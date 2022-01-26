@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;netcoreapp3.0;net461;net472;net48</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;netcoreapp3.1;net451;net461;net472;net48;net6</TargetFrameworks>
     <PackageTags>Thuria Extensions</PackageTags>
     <Authors>Johan Dercksen</Authors>
     <Company>Draco</Company>
@@ -9,9 +9,10 @@
     <PackageProjectUrl>https://github.com/DracoRSA/Thuria.Zitidar</PackageProjectUrl>
     <RepositoryUrl>https://github.com/DracoRSA/Thuria.Zitidar</RepositoryUrl>
     <PackageLicenseUrl>https://github.com/DracoRSA/Thuria.Zitidar/blob/master/LICENSE</PackageLicenseUrl>
-    <Version>1.3.0</Version>
+    <Version>1.6.0</Version>
     <Description>Various extensions to just add functionality to types like DateTime, String, Type, etc</Description>
-    <LangVersion>latest</LangVersion>
+    <Nullable>annotations</Nullable>
+    <LangVersion>10.0</LangVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

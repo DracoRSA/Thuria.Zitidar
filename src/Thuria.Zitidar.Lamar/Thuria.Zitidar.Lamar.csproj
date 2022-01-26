@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;netcoreapp3.0</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;netcoreapp3.1;net6</TargetFrameworks>
     <Authors>Johan Dercksen</Authors>
     <Company>Draco</Company>
     <Product>Thuria</Product>
@@ -12,6 +12,8 @@
     <Version>0.0.2-beta</Version>
     <Description>A set of additional functionality to add Lamar functionality to any application (Bootstrapper, IOC Container wrapper, etc)</Description>
     <RepositoryType>git</RepositoryType>
+    <Nullable>annotations</Nullable>
+    <LangVersion>10.0</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>

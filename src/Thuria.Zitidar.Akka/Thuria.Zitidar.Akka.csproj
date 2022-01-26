@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;netcoreapp3.0;net461;net472;net48</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;netcoreapp3.1;net461;net472;net48;net6</TargetFrameworks>
     <Authors>Johan Dercksen</Authors>
     <Company>Draco</Company>
     <Product>Thuria</Product>
@@ -11,7 +11,9 @@
     <PackageTags>Thuria Akka</PackageTags>
     <Description>Base Akka.Net interfaces and implementations for the Thuria Framework
 A set of functions and features to assist with creating an Actor System using [Akka.Net](http://getakka.net)</Description>
-    <Version>0.0.18-beta</Version>
+    <Version>0.1.0-beta</Version>
+    <Nullable>annotations</Nullable>
+    <LangVersion>10.0</LangVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
