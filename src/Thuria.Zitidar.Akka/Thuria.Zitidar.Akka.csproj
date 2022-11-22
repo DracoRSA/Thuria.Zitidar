@@ -21,7 +21,7 @@ A set of functions and features to assist with creating an Actor System using [A
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Akka" Version="1.4.9" />
+    <PackageReference Include="Akka" Version="1.4.46" />
     <PackageReference Include="Akka.DI.StructureMap" Version="1.3.0" />
   </ItemGroup>
 
