@@ -3,80 +3,66 @@ CONFIGURATION: Release
 NUGETPACKAGES:
   - Core:
     Name: Zitidar.Core
-    Version: 1.6.0
+    Version: 1.8.0
     Location: src/Thuria.Zitidar.Core
     IsBeta: false
     Frameworks:
-      - net451
       - net461
       - net472
+      - net8
       - netstandard2.0
       - netcoreapp3.1
       - net6
+      - net7
   - Extensions:
     Name: Zitidar.Extensions
-    Version: 1.6.0
+    Version: 1.8.0
     Location: src/Thuria.Zitidar.Extensions
     IsBeta: false
     Frameworks:
-      - net451
       - net461
       - net472
+      - net8
       - netstandard2.0
       - netcoreapp3.1
       - net6
+      - net7
   - Caching:
     Name: Zitidar.Caching
-    Version: 1.6.0
+    Version: 1.8.0
     Location: src/Thuria.Zitidar.Caching
     IsBeta: false
     Frameworks:
-      - net451
       - net461
       - net472
+      - net8
       - netstandard2.0
       - netcoreapp3.1
       - net6
-  - Structuremap:
-    Name: Zitidar.Structuremap
-    Version: 1.6.0
-    Location: src/Thuria.Zitidar.Structuremap
+      - net7
+  - Logging:
+    Name: Zitidar.Logging
+    Version: 1.9.0
+    Location: src/Thuria.Zitidar.Logging
     IsBeta: false
     Frameworks:
-      - net451
       - net461
       - net472
+      - net8
       - netstandard2.0
       - netcoreapp3.1
       - net6
+      - net7
   - Settings:
     Name: Zitidar.Settings
-    Version: 1.6.0
+    Version: 1.8.0
     Location: src/Thuria.Zitidar.Settings
     IsBeta: false
     Frameworks:
       - net461
       - net472
+      - net8
       - netstandard2.0
       - netcoreapp3.1
       - net6
-  - Akka:
-    Name: Zitidar.Akka
-    Version: 0.1.0
-    Location: src/Thuria.Zitidar.Akka
-    IsBeta: true  
-    Frameworks:
-      - net461
-      - net472
-      - netstandard2.0
-      - netcoreapp3.1
-      - net6
-  - Logging:
-    Name: Zitidar.Logging
-    Version: 1.6.0
-    Location: src/Thuria.Zitidar.Logging
-    IsBeta: false
-    Frameworks:
-      - netstandard2.0
-      - netcoreapp3.1
-      - net6
+      - net7

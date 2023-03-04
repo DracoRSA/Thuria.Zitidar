@@ -1,8 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;netcoreapp3.1;net6</TargetFrameworks>
-    <Version>1.6.0</Version>
+    <TargetFrameworks>netstandard2.0;netcoreapp3.1;net6;net7.0</TargetFrameworks>
+    <Version>1.9.0</Version>
     <Authors>Johan Dercksen</Authors>
     <Company>Draco</Company>
     <Product>Thuria</Product>
@@ -36,7 +36,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="NLog" Version="4.7.3" />
+    <PackageReference Include="NLog" Version="5.1.0" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;netcoreapp3.1;net451;net461;net472;net48;net6</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;netcoreapp3.1;net461;net472;net48;net6;net7.0</TargetFrameworks>
     <Authors>Johan Dercksen</Authors>
     <Company>Draco</Company>
     <Product>Thuria</Product>
@@ -10,7 +10,7 @@
     <PackageTags>Thuria Core</PackageTags>
     <PackageLicenseUrl>https://github.com/DracoRSA/Thuria.Zitidar/blob/master/LICENSE</PackageLicenseUrl>
     <Description>A set of interfaces to allow for development against just an API specific to the Thuria Framework using dependency injection</Description>
-    <Version>1.6.0</Version>
+    <Version>1.8.0</Version>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <Nullable>annotations</Nullable>
     <LangVersion>10.0</LangVersion>

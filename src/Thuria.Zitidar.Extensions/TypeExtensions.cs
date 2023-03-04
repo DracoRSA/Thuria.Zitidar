@@ -11,6 +11,7 @@ namespace Thuria.Zitidar.Extensions
   {
     private static readonly Dictionary<Type, Func<object>> DefaultValueGenerators = new Dictionary<Type, Func<object>>
                                                                                       {
+                                                                                        {typeof(string), () => default(string) },
                                                                                         {typeof(Guid), () => Guid.Empty},
                                                                                         {typeof(DateTime), () => default(DateTime)},
                                                                                         {typeof(int), () => default(int)},
