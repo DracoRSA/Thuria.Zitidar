@@ -1,8 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;netcoreapp3.1;net6;net7.0</TargetFrameworks>
-    <Version>1.9.0</Version>
+    <TargetFrameworks>netstandard2.0;net6;net7.0;net8.0</TargetFrameworks>
+    <Version>1.10.1</Version>
     <Authors>Johan Dercksen</Authors>
     <Company>Draco</Company>
     <Product>Thuria</Product>
@@ -14,7 +14,7 @@
     <RepositoryType>git</RepositoryType>
     <PackageTags>Thuria Logging</PackageTags>
     <Nullable>annotations</Nullable>
-    <LangVersion>10.0</LangVersion>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -36,7 +36,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="NLog" Version="5.1.0" />
+    <PackageReference Include="NLog" Version="5.2.8" />
   </ItemGroup>
 
   <ItemGroup>

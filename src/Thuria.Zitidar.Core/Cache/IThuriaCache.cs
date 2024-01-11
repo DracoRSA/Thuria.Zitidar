@@ -24,7 +24,6 @@ namespace Thuria.Zitidar.Core.Cache
     /// <summary>
     /// Insert / Update the Cache Data Item (Async)
     /// </summary>
-    /// <typeparam name="T">Data Type</typeparam>
     /// <param name="cacheKey">Cache Key</param>
     /// <param name="cacheValue">Cache Value</param>
     /// <param name="setCacheExpiry">Set the Cache Expiry Value (Optional - Default true)</param>

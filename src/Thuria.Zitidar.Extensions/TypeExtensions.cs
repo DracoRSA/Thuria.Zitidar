@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Reflection;
 using System.Collections.Generic;
 
 namespace Thuria.Zitidar.Extensions
@@ -9,23 +8,23 @@ namespace Thuria.Zitidar.Extensions
   /// </summary>
   public static class TypeExtensions
   {
-    private static readonly Dictionary<Type, Func<object>> DefaultValueGenerators = new Dictionary<Type, Func<object>>
-                                                                                      {
-                                                                                        {typeof(string), () => default(string) },
-                                                                                        {typeof(Guid), () => Guid.Empty},
-                                                                                        {typeof(DateTime), () => default(DateTime)},
-                                                                                        {typeof(int), () => default(int)},
-                                                                                        {typeof(uint), () => default(uint)},
-                                                                                        {typeof(long), () => default(long)},
-                                                                                        {typeof(decimal), () => default(decimal)},
-                                                                                        {typeof(float), () => default(float)},
-                                                                                        {typeof(bool), () => default(bool)},
-                                                                                      };
+    private static readonly Dictionary<Type, Func<object>> DefaultValueGenerators = new()
+                                                                                    {
+                                                                                      { typeof(string), () => default(string) },
+                                                                                      { typeof(Guid), () => Guid.Empty },
+                                                                                      { typeof(DateTime), () => default(DateTime) },
+                                                                                      { typeof(int), () => default(int) },
+                                                                                      { typeof(uint), () => default(uint) },
+                                                                                      { typeof(long), () => default(long) },
+                                                                                      { typeof(decimal), () => default(decimal) },
+                                                                                      { typeof(float), () => default(float) },
+                                                                                      { typeof(bool), () => default(bool) },
+                                                                                    };
 
-    private static readonly Dictionary<Type, Func<object, object>> TypeConverters = new Dictionary<Type, Func<object, object>>
-                                                                        {
-                                                                          { typeof(Guid), inputValue => Guid.Parse(inputValue.ToString()) }
-                                                                        };
+    private static readonly Dictionary<Type, Func<object, object>> TypeConverters = new()
+                                                                                    {
+                                                                                      { typeof(Guid), inputValue => Guid.Parse(inputValue.ToString()) }
+                                                                                    };
 
     /// <summary>
     /// Get Property Value
@@ -93,7 +92,7 @@ namespace Thuria.Zitidar.Extensions
     /// </summary>
     /// <param name="objectType">Type</param>
     /// <returns>Default Value or null</returns>
-    public static object GetDefaultData(this Type objectType)
+    public static object? GetDefaultData(this Type objectType)
     {
       if (objectType.IsGenericType && (objectType.GetGenericTypeDefinition() == typeof(IList<>)))
       {
@@ -103,8 +102,8 @@ namespace Thuria.Zitidar.Extensions
         return Activator.CreateInstance(genericType);
       }
 
-      return DefaultValueGenerators.ContainsKey(objectType) 
-                        ? DefaultValueGenerators[objectType]() 
+      return DefaultValueGenerators.TryGetValue(objectType, out var generator) 
+                        ? generator() 
                         : null;
     }
   }

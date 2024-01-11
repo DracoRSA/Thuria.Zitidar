@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;netcoreapp3.1;net461;net472;net48;net6;net7.0</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;net472;net48;net6;net7.0;net8.0</TargetFrameworks>
     <PackageTags>Thuria Caching</PackageTags>
     <Authors>Johan Dercksen</Authors>
     <Company>Draco</Company>
@@ -9,11 +9,11 @@
     <PackageProjectUrl>https://github.com/DracoRSA/Thuria.Zitidar</PackageProjectUrl>
     <RepositoryUrl>https://github.com/DracoRSA/Thuria.Zitidar</RepositoryUrl>
     <PackageLicenseUrl>https://github.com/DracoRSA/Thuria.Zitidar/blob/master/LICENSE</PackageLicenseUrl>
-    <Version>1.8.0</Version>
+    <Version>1.10.1</Version>
     <Description>Various Caching functions and utilities</Description>
     <LangVersion>latest</LangVersion>
     <Nullable>annotations</Nullable>
-    <LangVersion>10.0</LangVersion>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
