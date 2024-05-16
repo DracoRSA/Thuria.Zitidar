@@ -6,3 +6,6 @@ NugetPackages:
   - 
     Name: Thuria.Zitidar.Caching
     Version: 2.0.2
+  - 
+    Name: Thuria.Zitidar.Extensions
+    Version: 2.0.2

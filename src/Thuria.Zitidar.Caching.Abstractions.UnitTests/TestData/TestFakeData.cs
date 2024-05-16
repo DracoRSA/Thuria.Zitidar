@@ -1,6 +1,5 @@
-﻿namespace Thuria.Zitidar.Caching.Abstractions.UnitTests.TestData
+﻿namespace Thuria.Zitidar.Caching.Abstractions.UnitTests.TestData;
+
+public class TestFakeData
 {
-    public class TestFakeData
-    {
-    }
 }

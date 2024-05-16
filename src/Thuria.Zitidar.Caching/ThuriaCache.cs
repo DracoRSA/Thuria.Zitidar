@@ -15,6 +15,7 @@ public class ThuriaCache<T> : IThuriaCache<T>
 {
     private readonly IMemoryCache _memoryCache;
     private readonly SemaphoreSlim _cacheLock = new(1, 1);
+    private readonly DateTimeOffset _expiryTimeSpan;
 
     /// <summary>
     /// Thuria Type Cache constructor
@@ -28,24 +29,64 @@ public class ThuriaCache<T> : IThuriaCache<T>
             throw new ArgumentException($"Expiry in Seconds cannot be Zero or Negative [{expiryInSeconds}]", nameof(expiryInSeconds));
         }
 
-        _memoryCache = memoryCache ?? throw new ArgumentNullException(nameof(memoryCache));
+        _memoryCache    = memoryCache ?? throw new ArgumentNullException(nameof(memoryCache));
+        _expiryTimeSpan = DateTimeOffset.Now.AddSeconds(expiryInSeconds);
     }
 
     /// <inheritdoc />
     public Task<bool> ExistsAsync(string cacheKey)
     {
-        throw new NotImplementedException();
+        return Task.FromResult(_memoryCache.TryGetValue(cacheKey, out _));
     }
 
     /// <inheritdoc />
-    public Task<bool> UpsertAsync(string cacheKey, IThuriaCacheData<T> cacheValue, bool setCacheExpiry = true)
+    public async Task<bool> UpsertAsync(string cacheKey, IThuriaCacheData<T> cacheValue, bool setCacheExpiry = true)
     {
-        throw new NotImplementedException();
+        if (cacheValue == null)
+        {
+            throw new ArgumentNullException(nameof(cacheValue));
+        }
+
+        await _cacheLock.WaitAsync();
+
+        try
+        {
+            if (_memoryCache.TryGetValue(cacheKey, out _))
+            {
+                _memoryCache.Remove(cacheKey);
+            }
+
+            var cacheEntryOptions = new MemoryCacheEntryOptions
+                                    {
+                                        AbsoluteExpiration = setCacheExpiry ? _expiryTimeSpan : null
+                                    };
+
+            _memoryCache.Set(cacheKey, cacheValue, cacheEntryOptions);
+            return true;
+        }
+        catch (Exception)
+        {
+            return false;
+        }
+        finally
+        {
+            _cacheLock.Release();
+        }
     }
 
     /// <inheritdoc />
-    public Task<T> GetAsync(string cacheKey)
+    public async Task<T?> GetAsync(string cacheKey)
     {
-        throw new NotImplementedException();
+        await _cacheLock.WaitAsync();
+        try
+        {
+            return _memoryCache.TryGetValue(cacheKey, out IThuriaCacheData<T?> cacheValue) 
+                       ? cacheValue.Value 
+                       : null;
+        }
+        finally
+        {
+            _cacheLock.Release();
+        }
     }
 }

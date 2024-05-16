@@ -33,5 +33,5 @@ public interface IThuriaCache<T> where T : class
     /// Null if item not found
     /// Cache Value if Cache Value found
     /// </returns>
-    Task<T> GetAsync(string cacheKey);
+    Task<T?> GetAsync(string cacheKey);
 }

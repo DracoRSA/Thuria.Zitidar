@@ -1,29 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Thuria.Zitidar.Extensions
+namespace Thuria.Zitidar.Extensions;
+
+/// <summary>
+/// Various Type and Object Extensions
+/// </summary>
+public static class TypeExtensions
 {
-  /// <summary>
-  /// Various Type and Object Extensions
-  /// </summary>
-  public static class TypeExtensions
-  {
     private static readonly Dictionary<Type, Func<object>> DefaultValueGenerators = new()
                                                                                     {
-                                                                                      { typeof(string), () => default(string) },
-                                                                                      { typeof(Guid), () => Guid.Empty },
-                                                                                      { typeof(DateTime), () => default(DateTime) },
-                                                                                      { typeof(int), () => default(int) },
-                                                                                      { typeof(uint), () => default(uint) },
-                                                                                      { typeof(long), () => default(long) },
-                                                                                      { typeof(decimal), () => default(decimal) },
-                                                                                      { typeof(float), () => default(float) },
-                                                                                      { typeof(bool), () => default(bool) },
+                                                                                        { typeof(string), () => default(string) },
+                                                                                        { typeof(Guid), () => Guid.Empty },
+                                                                                        { typeof(DateTime), () => default(DateTime) },
+                                                                                        { typeof(int), () => default(int) },
+                                                                                        { typeof(uint), () => default(uint) },
+                                                                                        { typeof(long), () => default(long) },
+                                                                                        { typeof(decimal), () => default(decimal) },
+                                                                                        { typeof(float), () => default(float) },
+                                                                                        { typeof(bool), () => default(bool) },
                                                                                     };
 
     private static readonly Dictionary<Type, Func<object, object>> TypeConverters = new()
                                                                                     {
-                                                                                      { typeof(Guid), inputValue => Guid.Parse(inputValue.ToString()) }
+                                                                                        { typeof(Guid), inputValue => Guid.Parse(inputValue.ToString() ?? string.Empty) }
                                                                                     };
 
     /// <summary>
@@ -32,15 +32,15 @@ namespace Thuria.Zitidar.Extensions
     /// <param name="currentObject">Current Object to get the value from</param>
     /// <param name="propertyName">Property Name</param>
     /// <returns>The value of the specified property</returns>
-    public static object GetPropertyValue(this object currentObject, string propertyName)
+    public static object? GetPropertyValue(this object currentObject, string propertyName)
     {
-      var propertyInfo = currentObject.GetType().GetProperty(propertyName);
-      if (propertyInfo == null)
-      {
-        throw new ArgumentException($"Property [{propertyName}] does not exist on object [{currentObject.GetType().Name}]");
-      }
+        var propertyInfo = currentObject.GetType().GetProperty(propertyName);
+        if (propertyInfo == null)
+        {
+            throw new ArgumentException($"Property [{propertyName}] does not exist on object [{currentObject.GetType().Name}]");
+        }
 
-      return propertyInfo.GetValue(currentObject);
+        return propertyInfo.GetValue(currentObject);
     }
 
     /// <summary>
@@ -52,25 +52,25 @@ namespace Thuria.Zitidar.Extensions
     /// <param name="convertIfRequired">Indicator to determine if the value must be converted to the Property Data Type</param>
     public static void SetPropertyValue(this object currentObject, string propertyName, object propertyValue, bool convertIfRequired = false)
     {
-      var propertyInfo = currentObject.GetType().GetProperty(propertyName);
-      if (propertyInfo == null)
-      {
-        throw new ArgumentException($"Property [{propertyName}] does not exist on object [{currentObject.GetType().Name}]");
-      }
+        var propertyInfo = currentObject.GetType().GetProperty(propertyName);
+        if (propertyInfo == null)
+        {
+            throw new ArgumentException($"Property [{propertyName}] does not exist on object [{currentObject.GetType().Name}]");
+        }
 
-      object valueToSet = null;
-      if (convertIfRequired && propertyValue.GetType() != propertyInfo.PropertyType)
-      {
-        valueToSet = TypeConverters.ContainsKey(propertyInfo.PropertyType) 
-                       ? TypeConverters[propertyInfo.PropertyType](propertyValue) 
-                       : Convert.ChangeType(propertyValue, propertyInfo.PropertyType);
-      }
-      else
-      {
-        valueToSet = propertyValue;
-      }
+        object valueToSet;
+        if (convertIfRequired && propertyValue.GetType() != propertyInfo.PropertyType)
+        {
+            valueToSet = TypeConverters.TryGetValue(propertyInfo.PropertyType, out var converter)
+                             ? converter(propertyValue)
+                             : Convert.ChangeType(propertyValue, propertyInfo.PropertyType);
+        }
+        else
+        {
+            valueToSet = propertyValue;
+        }
 
-      propertyInfo.SetValue(currentObject, valueToSet);
+        propertyInfo.SetValue(currentObject, valueToSet);
     }
 
     /// <summary>
@@ -81,10 +81,13 @@ namespace Thuria.Zitidar.Extensions
     /// <returns>A boolean indicating whether the property exists on the given object</returns>
     public static bool DoesPropertyExist(this object currentObject, string propertyName)
     {
-      if (currentObject == null) { throw new ArgumentNullException(nameof(currentObject)); }
+        if (currentObject == null)
+        {
+            throw new ArgumentNullException(nameof(currentObject));
+        }
 
-      var propertyInfo = currentObject.GetType().GetProperty(propertyName);
-      return propertyInfo != null;
+        var propertyInfo = currentObject.GetType().GetProperty(propertyName);
+        return propertyInfo != null;
     }
 
     /// <summary>
@@ -94,17 +97,16 @@ namespace Thuria.Zitidar.Extensions
     /// <returns>Default Value or null</returns>
     public static object? GetDefaultData(this Type objectType)
     {
-      if (objectType.IsGenericType && (objectType.GetGenericTypeDefinition() == typeof(IList<>)))
-      {
-        var listType         = typeof(List<>);
-        var listInternalType = objectType.GetGenericArguments()[0];
-        var genericType      = listType.MakeGenericType(new[] { listInternalType });
-        return Activator.CreateInstance(genericType);
-      }
+        if (objectType.IsGenericType && (objectType.GetGenericTypeDefinition() == typeof(IList<>)))
+        {
+            var listType         = typeof(List<>);
+            var listInternalType = objectType.GetGenericArguments()[0];
+            var genericType      = listType.MakeGenericType([listInternalType]);
+            return Activator.CreateInstance(genericType);
+        }
 
-      return DefaultValueGenerators.TryGetValue(objectType, out var generator) 
-                        ? generator() 
-                        : null;
+        return DefaultValueGenerators.TryGetValue(objectType, out var generator)
+                   ? generator()
+                   : null;
     }
-  }
 }
