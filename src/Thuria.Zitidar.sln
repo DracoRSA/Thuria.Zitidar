@@ -3,28 +3,20 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Thuria.Zitidar.Extensions", "Thuria.Zitidar.Extensions\Thuria.Zitidar.Extensions.csproj", "{9E3F6D21-FBF0-4C8C-8E5E-B5521B016DEC}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Thuria.Zitidar.Extensions.Tests", "Thuria.Zitidar.Extensions.Tests\Thuria.Zitidar.Extensions.Tests.csproj", "{15C2838C-08AF-4CBB-B5AD-CD16F8FF6A74}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Thuria.Zitidar.Core", "Thuria.Zitidar.Core\Thuria.Zitidar.Core.csproj", "{F09E3F51-6DEC-482E-92BC-AC142AC1347E}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4EC3D2B5-4C5C-4B92-BFA3-E6D2E4401551}"
 	ProjectSection(SolutionItems) = preProject
 		..\.buildSettings.yml = ..\.buildSettings.yml
-		..\gulpfile.js = ..\gulpfile.js
+		..\nuget.config = ..\nuget.config
 		..\readme.md = ..\readme.md
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Thuria.Zitidar.Settings", "Thuria.Zitidar.Settings\Thuria.Zitidar.Settings.csproj", "{16445786-974E-41E3-A577-3C7622A6FB77}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Thuria.Zitidar.Settings.Tests", "Thuria.Zitidar.Settings.Tests\Thuria.Zitidar.Settings.Tests.csproj", "{81FC0118-E6FC-4D6D-AD4C-A4908E9CB074}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Thuria.Zitidar.Logging", "Thuria.Zitidar.Logging\Thuria.Zitidar.Logging.csproj", "{177F0A8C-325A-410A-B6F5-4C0FB9823623}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Thuria.Zitidar.Caching", "Thuria.Zitidar.Caching\Thuria.Zitidar.Caching.csproj", "{DC6C3DCF-026A-49D3-8371-F2FF5C99A70E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Thuria.Zitidar.Caching.Tests", "Thuria.Zitidar.Caching.Tests\Thuria.Zitidar.Caching.Tests.csproj", "{D62D50C3-FF04-4C01-BD97-A5DF6B5B4C5C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NukeBuild", "..\NukeBuild\NukeBuild.csproj", "{B20C4AEA-C9F5-4FCA-9B3B-244FCFDBA688}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Thuria.Zitidar.Caching.Abstractions", "Thuria.Zitidar.Caching.Abstractions\Thuria.Zitidar.Caching.Abstractions.csproj", "{1D596665-DB7B-4FB6-9B39-5F048AEABC0D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Thuria.Zitidar.Caching.Abstractions.UnitTests", "Thuria.Zitidar.Caching.Abstractions.UnitTests\Thuria.Zitidar.Caching.Abstractions.UnitTests.csproj", "{12571969-7484-45A7-9092-AFFD75C53D67}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,38 +24,20 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9E3F6D21-FBF0-4C8C-8E5E-B5521B016DEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9E3F6D21-FBF0-4C8C-8E5E-B5521B016DEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9E3F6D21-FBF0-4C8C-8E5E-B5521B016DEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9E3F6D21-FBF0-4C8C-8E5E-B5521B016DEC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{15C2838C-08AF-4CBB-B5AD-CD16F8FF6A74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{15C2838C-08AF-4CBB-B5AD-CD16F8FF6A74}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{15C2838C-08AF-4CBB-B5AD-CD16F8FF6A74}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{15C2838C-08AF-4CBB-B5AD-CD16F8FF6A74}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F09E3F51-6DEC-482E-92BC-AC142AC1347E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F09E3F51-6DEC-482E-92BC-AC142AC1347E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F09E3F51-6DEC-482E-92BC-AC142AC1347E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F09E3F51-6DEC-482E-92BC-AC142AC1347E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{16445786-974E-41E3-A577-3C7622A6FB77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{16445786-974E-41E3-A577-3C7622A6FB77}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{16445786-974E-41E3-A577-3C7622A6FB77}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{16445786-974E-41E3-A577-3C7622A6FB77}.Release|Any CPU.Build.0 = Release|Any CPU
-		{81FC0118-E6FC-4D6D-AD4C-A4908E9CB074}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{81FC0118-E6FC-4D6D-AD4C-A4908E9CB074}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{81FC0118-E6FC-4D6D-AD4C-A4908E9CB074}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{81FC0118-E6FC-4D6D-AD4C-A4908E9CB074}.Release|Any CPU.Build.0 = Release|Any CPU
-		{177F0A8C-325A-410A-B6F5-4C0FB9823623}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{177F0A8C-325A-410A-B6F5-4C0FB9823623}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{177F0A8C-325A-410A-B6F5-4C0FB9823623}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{177F0A8C-325A-410A-B6F5-4C0FB9823623}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DC6C3DCF-026A-49D3-8371-F2FF5C99A70E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DC6C3DCF-026A-49D3-8371-F2FF5C99A70E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC6C3DCF-026A-49D3-8371-F2FF5C99A70E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC6C3DCF-026A-49D3-8371-F2FF5C99A70E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D62D50C3-FF04-4C01-BD97-A5DF6B5B4C5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D62D50C3-FF04-4C01-BD97-A5DF6B5B4C5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D62D50C3-FF04-4C01-BD97-A5DF6B5B4C5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D62D50C3-FF04-4C01-BD97-A5DF6B5B4C5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B20C4AEA-C9F5-4FCA-9B3B-244FCFDBA688}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B20C4AEA-C9F5-4FCA-9B3B-244FCFDBA688}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D596665-DB7B-4FB6-9B39-5F048AEABC0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D596665-DB7B-4FB6-9B39-5F048AEABC0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D596665-DB7B-4FB6-9B39-5F048AEABC0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D596665-DB7B-4FB6-9B39-5F048AEABC0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12571969-7484-45A7-9092-AFFD75C53D67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12571969-7484-45A7-9092-AFFD75C53D67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12571969-7484-45A7-9092-AFFD75C53D67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12571969-7484-45A7-9092-AFFD75C53D67}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

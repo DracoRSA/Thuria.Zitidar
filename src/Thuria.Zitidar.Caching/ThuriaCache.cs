@@ -1,90 +1,51 @@
 ﻿using System;
+using System.Threading;
 using System.Threading.Tasks;
-using System.Collections.Concurrent;
+using Microsoft.Extensions.Caching.Memory;
 
-using Thuria.Zitidar.Core.Cache;
+using Thuria.Zitidar.Caching.Abstractions.Caching;
 
-namespace Thuria.Zitidar.Caching
+namespace Thuria.Zitidar.Caching;
+
+/// <summary>
+/// Thuria Type Cache
+/// </summary>
+public class ThuriaCache<T> : IThuriaCache<T>
+    where T : class
 {
-  /// <summary>
-  /// Thuria Type Cache
-  /// </summary>
-  public class ThuriaCache<T> : IThuriaCache<T>
-  {
-    private readonly ConcurrentDictionary<string, IThuriaCacheData<T>> _cacheData;
+    private readonly IMemoryCache _memoryCache;
+    private readonly SemaphoreSlim _cacheLock = new(1, 1);
 
     /// <summary>
     /// Thuria Type Cache constructor
     /// </summary>
+    /// <param name="memoryCache">Memory Cache</param>
     /// <param name="expiryInSeconds">Expiry in Seconds (Default 15 minutes)</param>
-    public ThuriaCache(int expiryInSeconds = 54000)
+    public ThuriaCache(IMemoryCache memoryCache, int expiryInSeconds = 54000)
     {
-      if (expiryInSeconds <= 0)
-      {
-        throw new ArgumentException($"Expiry in Seconds cannot be Zero or Negative [{expiryInSeconds}]", nameof(expiryInSeconds));
-      }
+        if (expiryInSeconds <= 0)
+        {
+            throw new ArgumentException($"Expiry in Seconds cannot be Zero or Negative [{expiryInSeconds}]", nameof(expiryInSeconds));
+        }
 
-      ExpiryInSeconds = expiryInSeconds;
-      _cacheData      = new ConcurrentDictionary<string, IThuriaCacheData<T>>();
+        _memoryCache = memoryCache ?? throw new ArgumentNullException(nameof(memoryCache));
     }
-
-    /// <inheritdoc />
-    public int ExpiryInSeconds { get; }
 
     /// <inheritdoc />
     public Task<bool> ExistsAsync(string cacheKey)
     {
-      var taskCompletionSource = new TaskCompletionSource<bool>();
-
-      try
-      {
-        if (string.IsNullOrWhiteSpace(cacheKey)) { throw new ArgumentNullException(nameof(cacheKey)); }
-
-        var doesCacheDataExist = false;
-        if (_cacheData.ContainsKey(cacheKey))
-        {
-          doesCacheDataExist = _cacheData[cacheKey].Expiry > DateTime.UtcNow;
-        }
-
-        taskCompletionSource.SetResult(doesCacheDataExist);
-      }
-      catch (Exception runtimeException)
-      {
-        taskCompletionSource.SetException(runtimeException);
-      }
-
-      return taskCompletionSource.Task;
+        throw new NotImplementedException();
     }
 
     /// <inheritdoc />
-    public async Task<bool> UpsertAsync(string cacheKey, IThuriaCacheData<T> cacheValue, bool setCacheExpiry = true)
+    public Task<bool> UpsertAsync(string cacheKey, IThuriaCacheData<T> cacheValue, bool setCacheExpiry = true)
     {
-      if (cacheValue == null) { throw new ArgumentNullException(nameof(cacheValue)); }
-
-      if (setCacheExpiry)
-      {
-        cacheValue.Expiry = DateTime.UtcNow.AddSeconds(ExpiryInSeconds);
-      }
-
-      if (await ExistsAsync(cacheKey))
-      {
-        _cacheData.AddOrUpdate(cacheKey, cacheValue, (key, oldValue) => cacheValue);
-        return true;
-      }
-
-      return _cacheData.TryAdd(cacheKey, cacheValue);
+        throw new NotImplementedException();
     }
 
     /// <inheritdoc />
-    public async Task<T> GetAsync(string cacheKey)
+    public Task<T> GetAsync(string cacheKey)
     {
-      if (!await ExistsAsync(cacheKey))
-      {
-        return default(T);
-      }
-
-      _cacheData.TryGetValue(cacheKey, out var cacheValue);
-      return cacheValue == null ? default(T) : cacheValue.Value;
+        throw new NotImplementedException();
     }
-  }
 }

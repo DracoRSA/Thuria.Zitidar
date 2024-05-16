@@ -14,9 +14,9 @@ pool:
 
 steps:
 - task: DotNetCoreInstaller@0
-  displayName: 'Install dotnet core 2.2.300'
+  displayName: 'Install Dotnet SDK'
   inputs:
-    version: '2.2.300'
+    version: '8.0'
     
 - script: npm install
 
