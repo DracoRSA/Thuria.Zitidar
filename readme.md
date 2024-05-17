@@ -12,6 +12,7 @@
       - [Type](#type)
       - [Data Reader (IDataReader)](#data-reader-idatareader)
     - [Cache](#cache)
+    - [Web API](#web-api)
 
 ## Overview
 Thuria Zitidar is a set of nuget packages that implements some of the basic plumbing that is required to create a Dotnet Core application that could be using a combination of Dependency Injection, the Akka Actor Framework, and Database Access or all of it.
@@ -20,9 +21,9 @@ Thuria Zitidar is a set of nuget packages that implements some of the basic plum
 
 * **Extensions** - Various extensions to just add functionality to types like DateTime, String, Type, etc
 * **Caching** - A set of additional functionality to add structuremap functionality to any application (Bootstrapper, IOC Container wrapper, etc)
+* **Web API Extensions** - A set of extensions and interfaces to make it easier to register and configure your Web API endpoints
 
 ### Extensions
-
 The following extensions are part of the package:
 
 #### DateTime
@@ -53,8 +54,6 @@ The following extensions are part of the package:
 ---
 
 ### Cache
-
-
 The Cache package provides caching functionality with some basic cache expiry functionality.
 
 Example:
@@ -67,3 +66,8 @@ var cacheExists = await thuriaCache.ExistsAsync("CacheKey");
 var returnedData = await thuriaCache.GetAsync("CacheKey");
 ```
 ---
+
+### Web API
+The Web API package contains the following features:
+
+**TBD**
