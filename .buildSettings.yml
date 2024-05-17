@@ -8,4 +8,10 @@ NugetPackages:
     Version: 2.0.2
   - 
     Name: Thuria.Zitidar.Extensions
-    Version: 2.0.2
+    Version: 1.11.0
+  - 
+    Name: Thuria.Zitidar.WebApi.Abstractions
+    Version: 1.0.0
+  - 
+    Name: Thuria.Zitidar.WebApi
+    Version: 1.0.0

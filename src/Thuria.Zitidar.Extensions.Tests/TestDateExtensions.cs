@@ -10,13 +10,13 @@ public class TestDateExtensions
     [Test]
     public void StartOfDay_GivenSpecificDate_ShouldReturnExpectedDateTime()
     {
-        //---------------Set up test pack-------------------
+        // Arrange
         var inputValue = new DateTime(2015, 6, 15, 18, 23, 30);
-        //---------------Assert Precondition----------------
-        //---------------Execute Test ----------------------
-        var startOfDay = inputValue.StartOfDay();
-        //---------------Test Result -----------------------
 
+        // Act
+        var startOfDay = inputValue.StartOfDay();
+
+        // Assert
         startOfDay.Year.Should().Be(inputValue.Year);
         startOfDay.Month.Should().Be(inputValue.Month);
         startOfDay.Day.Should().Be(inputValue.Day);
@@ -28,12 +28,13 @@ public class TestDateExtensions
     [Test]
     public void EndOfDay_GivenSpecificDate_ShouldReturnExpectedDateTime()
     {
-        //---------------Set up test pack-------------------
+        // Arrange
         var inputValue = new DateTime(2015, 6, 15, 18, 23, 30);
-        //---------------Assert Precondition----------------
-        //---------------Execute Test ----------------------
+
+        // Act
         var endOfDay = inputValue.EndOfDay();
-        //---------------Test Result -----------------------
+
+        // Assert
         endOfDay.Year.Should().Be(inputValue.Year);
         endOfDay.Month.Should().Be(inputValue.Month);
         endOfDay.Day.Should().Be(inputValue.Day);
