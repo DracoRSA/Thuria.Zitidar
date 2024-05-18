@@ -1,6 +1,6 @@
 using System;
 
-namespace Thuria.Zitidar.Extensions.Tests;
+namespace Thuria.Zitidar.Extensions.UnitTests;
 
 public class FakeReflection
 {

@@ -1,6 +1,9 @@
 Configuration: Release
 NugetPackages:
   - 
+    Name: Thuria.Zitidar.Core
+    Version: 1.0.0
+  - 
     Name: Thuria.Zitidar.Caching.Abstractions
     Version: 2.0.2
   - 

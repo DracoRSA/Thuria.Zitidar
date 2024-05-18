@@ -1,7 +1,7 @@
 ﻿using NUnit.Framework;
 using FluentAssertions;
 
-namespace Thuria.Zitidar.Extensions.Tests;
+namespace Thuria.Zitidar.Extensions.UnitTests;
 
 [TestFixture]
 public class TestStringExtensions

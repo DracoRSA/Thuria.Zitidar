@@ -2,7 +2,7 @@
 using FluentAssertions;
 using NUnit.Framework;
 
-namespace Thuria.Zitidar.Extensions.Tests;
+namespace Thuria.Zitidar.Extensions.UnitTests;
 
 [TestFixture]
 public class TestDateExtensions
