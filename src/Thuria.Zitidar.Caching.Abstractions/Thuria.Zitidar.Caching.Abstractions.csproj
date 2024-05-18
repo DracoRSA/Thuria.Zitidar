@@ -1,14 +1,25 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-    <GenerateDocumentationFile>True</GenerateDocumentationFile>
-  </PropertyGroup>
+    <PropertyGroup>
+        <TargetFrameworks>net6.0;net7.0;net8.0</TargetFrameworks>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <GenerateDocumentationFile>True</GenerateDocumentationFile>
 
-  <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="8.0.0" />
-  </ItemGroup>
+        <PackageTags>Thuria Caching</PackageTags>
+        <Authors>Johan Dercksen</Authors>
+        <Company>Draco</Company>
+        <Product>Thuria</Product>
+        <PackageProjectUrl>https://github.com/DracoRSA/Thuria.Zitidar</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/DracoRSA/Thuria.Zitidar</RepositoryUrl>
+        <PackageLicenseUrl>https://github.com/DracoRSA/Thuria.Zitidar/blob/master/LICENSE</PackageLicenseUrl>
+        <Description>Various Caching functions and utilities</Description>
+        <LangVersion>latest</LangVersion>
+        <SuppressNETCoreSdkPreviewMessage>true</SuppressNETCoreSdkPreviewMessage>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="8.0.0" />
+    </ItemGroup>
 
 </Project>

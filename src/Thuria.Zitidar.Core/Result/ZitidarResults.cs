@@ -11,6 +11,10 @@ public sealed class ZitidarResults<T>
     private readonly T? _resultValue;
     private readonly List<ZitidarError>? _resultErrors;
 
+    /// <summary>
+    /// Zitidar Results Constructor
+    /// </summary>
+    /// <param name="resultValue">Success Result Value</param>
     public ZitidarResults(T resultValue)
     {
         IsError       = false;
@@ -18,6 +22,10 @@ public sealed class ZitidarResults<T>
         _resultErrors = default;
     }
 
+    /// <summary>
+    /// Zitidar Result Constructor
+    /// </summary>
+    /// <param name="resultError">Error Result</param>
     public ZitidarResults(List<ZitidarError> resultError)
     {
         IsError       = true;
@@ -84,7 +92,6 @@ public sealed class ZitidarResults<T>
     /// <summary>
     /// Match Result to its appropriate result path
     /// </summary>
-    /// <typeparam name="T"></typeparam>
     /// <param name="success">Success path</param>
     /// <param name="failure">Error path</param>
     /// <returns>

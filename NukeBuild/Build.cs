@@ -25,8 +25,6 @@ class Build : NukeBuild
     [Solution]
     readonly Solution Solution;
 
-    [GitVersion] readonly GitVersion GitVersion;
-
     [Parameter] [Secret] readonly string NuGetApiKey;
     [Parameter] readonly string NuGetSource;
 

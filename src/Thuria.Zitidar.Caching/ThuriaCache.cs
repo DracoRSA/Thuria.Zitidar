@@ -1,7 +1,4 @@
-﻿using System;
-using System.Threading;
-using System.Threading.Tasks;
-using Microsoft.Extensions.Caching.Memory;
+﻿using Microsoft.Extensions.Caching.Memory;
 
 using Thuria.Zitidar.Caching.Abstractions.Caching;
 
@@ -80,8 +77,8 @@ public class ThuriaCache<T> : IThuriaCache<T>
         await _cacheLock.WaitAsync();
         try
         {
-            return _memoryCache.TryGetValue(cacheKey, out IThuriaCacheData<T?> cacheValue) 
-                       ? cacheValue.Value 
+            return _memoryCache.TryGetValue(cacheKey, out IThuriaCacheData<T>? cacheValue) 
+                       ? cacheValue?.Value ?? default
                        : null;
         }
         finally

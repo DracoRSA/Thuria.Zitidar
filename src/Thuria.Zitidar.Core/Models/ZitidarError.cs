@@ -7,6 +7,12 @@ namespace Thuria.Zitidar.Core.Models;
 /// </summary>
 public sealed class ZitidarError : IZitidarError
 {
+    /// <summary>
+    /// Zitidar Error Constructor
+    /// </summary>
+    /// <param name="errorCode">Error Code</param>
+    /// <param name="message">Error Message</param>
+    /// <param name="exception">Exception details</param>
     public ZitidarError(int errorCode, string message, Exception? exception = null)
     {
         if (errorCode <= 0)

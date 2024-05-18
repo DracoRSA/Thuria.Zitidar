@@ -8,18 +8,18 @@ namespace Thuria.Zitidar.Extensions;
 /// </summary>
 public static class TypeExtensions
 {
-    private static readonly Dictionary<Type, Func<object>> DefaultValueGenerators = new()
-                                                                                    {
-                                                                                        { typeof(string), () => default(string) },
-                                                                                        { typeof(Guid), () => Guid.Empty },
-                                                                                        { typeof(DateTime), () => default(DateTime) },
-                                                                                        { typeof(int), () => default(int) },
-                                                                                        { typeof(uint), () => default(uint) },
-                                                                                        { typeof(long), () => default(long) },
-                                                                                        { typeof(decimal), () => default(decimal) },
-                                                                                        { typeof(float), () => default(float) },
-                                                                                        { typeof(bool), () => default(bool) },
-                                                                                    };
+    private static readonly Dictionary<Type, Func<object?>> DefaultValueGenerators = new()
+                                                                                     {
+                                                                                         { typeof(string), () => default(string) },
+                                                                                         { typeof(Guid), () => Guid.Empty },
+                                                                                         { typeof(DateTime), () => default(DateTime) },
+                                                                                         { typeof(int), () => default(int) },
+                                                                                         { typeof(uint), () => default(uint) },
+                                                                                         { typeof(long), () => default(long) },
+                                                                                         { typeof(decimal), () => default(decimal) },
+                                                                                         { typeof(float), () => default(float) },
+                                                                                         { typeof(bool), () => default(bool) },
+                                                                                     };
 
     private static readonly Dictionary<Type, Func<object, object>> TypeConverters = new()
                                                                                     {

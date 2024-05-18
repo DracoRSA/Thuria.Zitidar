@@ -45,7 +45,7 @@ public static class DataReaderExtensions
     /// <param name="isMandatory">Mandatory indicator</param>
     /// <param name="defaultValue">Default Value</param>
     /// <returns>Either the default value or the current record's column value</returns>
-    public static T GetValue<T>(this IDataReader dataReader, string columnName, bool isMandatory = false, T defaultValue = default(T))
+    public static T? GetValue<T>(this IDataReader dataReader, string columnName, bool isMandatory = false, T? defaultValue = default)
     {
         if (dataReader == null)
         {
