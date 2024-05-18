@@ -155,7 +155,7 @@ class Build : NukeBuild
                                       }
                                   });
 
-    Target Push => _ => _
+    Target Publish => _ => _
                         .DependsOn(Pack)
                         .Requires(() => NuGetApiKey)
                         .Requires(() => NuGetSource)
