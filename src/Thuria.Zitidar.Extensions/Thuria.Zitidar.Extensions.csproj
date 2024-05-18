@@ -1,26 +1,29 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;net472;net48;net6;net7.0;net8.0</TargetFrameworks>
-    <PackageTags>Thuria Extensions</PackageTags>
-    <Authors>Johan Dercksen</Authors>
-    <Company>Draco</Company>
-    <Product>Thuria</Product>
-    <PackageProjectUrl>https://github.com/DracoRSA/Thuria.Zitidar</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/DracoRSA/Thuria.Zitidar</RepositoryUrl>
-    <PackageLicenseUrl>https://github.com/DracoRSA/Thuria.Zitidar/blob/master/LICENSE</PackageLicenseUrl>
-    <Version>1.10.1</Version>
-    <Description>Various extensions to just add functionality to types like DateTime, String, Type, etc</Description>
-    <Nullable>annotations</Nullable>
-    <LangVersion>latest</LangVersion>
-  </PropertyGroup>
+    <PropertyGroup>
+        <TargetFrameworks>net6.0;net7.0;net8.0</TargetFrameworks>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <GenerateDocumentationFile>True</GenerateDocumentationFile>
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>Thuria.Zitidar.Extensions.xml</DocumentationFile>
-  </PropertyGroup>
+        <PackageTags>Thuria Extensions</PackageTags>
+        <Authors>Johan Dercksen</Authors>
+        <Company>Draco</Company>
+        <Product>Thuria</Product>
+        <PackageProjectUrl>https://github.com/DracoRSA/Thuria.Zitidar</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/DracoRSA/Thuria.Zitidar</RepositoryUrl>
+        <PackageLicenseUrl>https://github.com/DracoRSA/Thuria.Zitidar/blob/master/LICENSE</PackageLicenseUrl>
+        <Description>Various Extensions and utilities</Description>
+        <LangVersion>latest</LangVersion>
+        <SuppressNETCoreSdkPreviewMessage>true</SuppressNETCoreSdkPreviewMessage>
+    </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
-    <DocumentationFile>Thuria.Zitidar.Extensions.xml</DocumentationFile>
-  </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+        <DocumentationFile>Thuria.Zitidar.Extensions.xml</DocumentationFile>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
+        <DocumentationFile>Thuria.Zitidar.Extensions.xml</DocumentationFile>
+    </PropertyGroup>
 
 </Project>

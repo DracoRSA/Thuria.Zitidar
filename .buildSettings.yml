@@ -1,63 +1,20 @@
-VERSION: 1.10.0
-CONFIGURATION: Release
-NUGETPACKAGES:
-  - Core:
-    Name: Zitidar.Core
-    Version: 1.10.1
-    Location: src/Thuria.Zitidar.Core
-    IsBeta: false
-    Frameworks:
-      - net472
-      - net8
-      - netstandard2.0
-      - net6
-      - net7
-      - net8
-  - Extensions:
-    Name: Zitidar.Extensions
-    Version: 1.10.1
-    Location: src/Thuria.Zitidar.Extensions
-    IsBeta: false
-    Frameworks:
-      - net472
-      - net8
-      - netstandard2.0
-      - net6
-      - net7
-      - net8
-  - Caching:
-    Name: Zitidar.Caching
-    Version: 1.10.1
-    Location: src/Thuria.Zitidar.Caching
-    IsBeta: false
-    Frameworks:
-      - net472
-      - net8
-      - netstandard2.0
-      - net6
-      - net7
-      - net8
-  - Logging:
-    Name: Zitidar.Logging
-    Version: 1.10.1
-    Location: src/Thuria.Zitidar.Logging
-    IsBeta: false
-    Frameworks:
-      - net472
-      - net8
-      - netstandard2.0
-      - net6
-      - net7
-      - net8
-  - Settings:
-    Name: Zitidar.Settings
-    Version: 1.10.1
-    Location: src/Thuria.Zitidar.Settings
-    IsBeta: false
-    Frameworks:
-      - net472
-      - net8
-      - netstandard2.0
-      - net6
-      - net7
-      - net8
+Configuration: Release
+NugetPackages:
+  - 
+    Name: Thuria.Zitidar.Core
+    Version: 2.0.0
+  - 
+    Name: Thuria.Zitidar.Caching.Abstractions
+    Version: 2.0.4
+  - 
+    Name: Thuria.Zitidar.Caching
+    Version: 2.0.4
+  - 
+    Name: Thuria.Zitidar.Extensions
+    Version: 1.11.1
+  - 
+    Name: Thuria.Zitidar.WebApi.Abstractions
+    Version: 1.0.1
+  - 
+    Name: Thuria.Zitidar.WebApi
+    Version: 1.0.1

@@ -3,13 +3,13 @@ using System.Text;
 using System.Linq;
 using System.Collections.Generic;
 
-namespace Thuria.Zitidar.Extensions
+namespace Thuria.Zitidar.Extensions;
+
+/// <summary>
+/// Enumerable Extensions
+/// </summary>
+public static class EnumerableExtensions
 {
-  /// <summary>
-  /// Enumerable Extensions
-  /// </summary>
-  public static class EnumerableExtensions
-  {
     /// <summary>
     /// Foreach item in a collection perform a specified action
     /// </summary>
@@ -18,10 +18,10 @@ namespace Thuria.Zitidar.Extensions
     /// <param name="actionToExecute">Action to be executed for each item in the collection</param>
     public static void ForEach<T>(this IEnumerable<T> inputCollection, Action<T> actionToExecute)
     {
-      foreach (var currentItem in inputCollection)
-      {
-        actionToExecute(currentItem);
-      }
+        foreach (var currentItem in inputCollection)
+        {
+            actionToExecute(currentItem);
+        }
     }
 
     /// <summary>
@@ -30,10 +30,14 @@ namespace Thuria.Zitidar.Extensions
     /// <typeparam name="T">Collection Type</typeparam>
     /// <param name="inputCollection">Input Collection</param>
     /// <returns>Boolean indicating if the collection is empty (true) or not (false)</returns>
-    public static bool IsEmpty<T>(this IEnumerable<T> inputCollection)
+    public static bool IsEmpty<T>(this IEnumerable<T>? inputCollection)
     {
-      if (inputCollection == null) { return true; }
-      return !inputCollection.Any();
+        if (inputCollection == null)
+        {
+            return true;
+        }
+
+        return !inputCollection.Any();
     }
 
     /// <summary>
@@ -44,18 +48,19 @@ namespace Thuria.Zitidar.Extensions
     /// <returns>A newline delimited string representing all the items in a collection</returns>
     public static string GetAllAsString<T>(this IEnumerable<T> inputCollection)
     {
-      var allStrings = new StringBuilder();
+        var allStrings = new StringBuilder();
 
-      foreach (var currentObject in inputCollection)
-      {
-        if (allStrings.Length > 0)
+        foreach (var currentObject in inputCollection)
         {
-          allStrings.Append(Environment.NewLine);
+            if (allStrings.Length > 0)
+            {
+                allStrings.Append(Environment.NewLine);
+            }
+
+            allStrings.Append(currentObject);
         }
 
-        allStrings.Append(currentObject);
-      }
-      return allStrings.ToString();
+        return allStrings.ToString();
     }
 
     /// <summary>
@@ -67,7 +72,6 @@ namespace Thuria.Zitidar.Extensions
     /// <returns>The newly create collection of items</returns>
     public static IEnumerable<T> And<T>(this IEnumerable<T> inputCollection, params T[] itemsToAdd)
     {
-      return inputCollection.Concat(itemsToAdd);
+        return inputCollection.Concat(itemsToAdd);
     }
-  }
 }

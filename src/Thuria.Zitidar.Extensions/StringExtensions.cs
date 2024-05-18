@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Text.RegularExpressions;
 
-namespace Thuria.Zitidar.Extensions
+namespace Thuria.Zitidar.Extensions;
+
+/// <summary>
+/// String Extensions
+/// </summary>
+public static class StringExtensions
 {
-  /// <summary>
-  /// String Extensions
-  /// </summary>
-  public static class StringExtensions
-  {
     private static readonly Regex SpaceAndCharacterRegex = new Regex("[^a-zA-Z0-9_]");
 
     /// <summary>
@@ -17,7 +17,7 @@ namespace Thuria.Zitidar.Extensions
     /// <returns>String with the spaces and characters removed</returns>
     public static string RemoveSpaceAndCharacters(this string inputString)
     {
-      return SpaceAndCharacterRegex.Replace(inputString, string.Empty);
+        return SpaceAndCharacterRegex.Replace(inputString, string.Empty);
     }
 
     /// <summary>
@@ -27,8 +27,8 @@ namespace Thuria.Zitidar.Extensions
     /// <returns>String converted to Camel Case</returns>
     public static string CamelCase(this string inputString)
     {
-      var returnValue = inputString.PascalCase();
-      return char.ToLowerInvariant(returnValue[0]) + returnValue.Substring(1);
+        var returnValue = inputString.PascalCase();
+        return char.ToLowerInvariant(returnValue[0]) + returnValue.Substring(1);
     }
 
     /// <summary>
@@ -38,15 +38,15 @@ namespace Thuria.Zitidar.Extensions
     /// <returns>String converted to Pascal Casing</returns>
     public static string PascalCase(this string inputString)
     {
-      var words = inputString.Split(new char[] { ' ', '_' }, StringSplitOptions.RemoveEmptyEntries);
-      var result = "";
+        var words  = inputString.Split(new[] { ' ', '_' }, StringSplitOptions.RemoveEmptyEntries);
+        var result = "";
 
-      foreach (var word in words)
-      {
-        result += $"{word.Substring(0, 1).ToUpper()}{word.Substring(1, word.Length - 1)}";
-      }
+        foreach (var word in words)
+        {
+            result += $"{word.Substring(0, 1).ToUpper()}{word.Substring(1, word.Length - 1)}";
+        }
 
-      return result.RemoveSpaceAndCharacters();
+        return result.RemoveSpaceAndCharacters();
     }
 
     /// <summary>
@@ -56,9 +56,8 @@ namespace Thuria.Zitidar.Extensions
     /// <returns>String with the Quotes escaped</returns>
     public static string EscapeQuotes(this string inputString)
     {
-      return string.IsNullOrEmpty(inputString)
-                              ? string.Empty
-                              : inputString.Replace("\"", "\\\"");
+        return string.IsNullOrEmpty(inputString)
+                   ? string.Empty
+                   : inputString.Replace("\"", "\\\"");
     }
-  }
 }
