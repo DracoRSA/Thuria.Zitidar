@@ -166,6 +166,11 @@ class Build : NukeBuild
 
                                       foreach (var currentPackage in filesToPush)
                                       {
+                                          if (!currentPackage.Name.Contains("Extensions"))
+                                          {
+                                              continue;
+                                          }
+
                                           // Exclude the Symbols Packages
                                           if (currentPackage.Name.Contains(".symbols."))
                                           {

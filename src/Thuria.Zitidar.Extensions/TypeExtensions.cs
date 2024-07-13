@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace Thuria.Zitidar.Extensions;
+﻿namespace Thuria.Zitidar.Extensions;
 
 /// <summary>
 /// Various Type and Object Extensions
@@ -12,13 +9,21 @@ public static class TypeExtensions
                                                                                      {
                                                                                          { typeof(string), () => default(string) },
                                                                                          { typeof(Guid), () => Guid.Empty },
+                                                                                         { typeof(Guid?), () => null },
                                                                                          { typeof(DateTime), () => default(DateTime) },
                                                                                          { typeof(int), () => default(int) },
+                                                                                         { typeof(int?), () => null },
                                                                                          { typeof(uint), () => default(uint) },
+                                                                                         { typeof(uint?), () => null },
                                                                                          { typeof(long), () => default(long) },
+                                                                                         { typeof(long?), () => null },
                                                                                          { typeof(decimal), () => default(decimal) },
+                                                                                         { typeof(decimal?), () => null },
                                                                                          { typeof(float), () => default(float) },
+                                                                                         { typeof(float?), () => null },
                                                                                          { typeof(bool), () => default(bool) },
+                                                                                         { typeof(bool?), () => null },
+                                                                                         { typeof(Uri), () => new Uri("https://zitidartesting.com") }
                                                                                      };
 
     private static readonly Dictionary<Type, Func<object, object>> TypeConverters = new()
@@ -107,6 +112,6 @@ public static class TypeExtensions
 
         return DefaultValueGenerators.TryGetValue(objectType, out var generator)
                    ? generator()
-                   : null;
+                   : default;
     }
 }
