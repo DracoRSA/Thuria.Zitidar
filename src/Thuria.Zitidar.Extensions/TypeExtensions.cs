@@ -22,8 +22,7 @@ public static class TypeExtensions
                                                                                          { typeof(float), () => default(float) },
                                                                                          { typeof(float?), () => null },
                                                                                          { typeof(bool), () => default(bool) },
-                                                                                         { typeof(bool?), () => null },
-                                                                                         { typeof(Uri), () => new Uri("https://zitidartesting.com") }
+                                                                                         { typeof(bool?), () => null }
                                                                                      };
 
     private static readonly Dictionary<Type, Func<object, object>> TypeConverters = new()
